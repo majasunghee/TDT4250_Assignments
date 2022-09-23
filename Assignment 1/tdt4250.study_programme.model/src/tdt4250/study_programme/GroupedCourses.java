@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see tdt4250.study_programme.Study_programmePackage#getGroupedCourses()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='mustContainACourse'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL mustContainACourse='self.courses&gt;1'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 mustContainACourse='self.courses -&gt; size() &gt; 0'"
  * @generated
  */
 public interface GroupedCourses extends EObject {

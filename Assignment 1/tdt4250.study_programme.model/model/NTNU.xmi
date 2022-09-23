@@ -55,6 +55,12 @@
             courses="//@courses.21">
           <name>Mandatory courses</name>
         </groupedCourses>
+        <groupedCourses
+            type="Elective"/>
+      </semesters>
+      <semesters
+          courses="//@courses.10 //@courses.17 //@courses.7 //@courses.11 //@courses.3 //@courses.14">
+        <name>toValidate</name>
       </semesters>
     </specializations>
   </programmes>

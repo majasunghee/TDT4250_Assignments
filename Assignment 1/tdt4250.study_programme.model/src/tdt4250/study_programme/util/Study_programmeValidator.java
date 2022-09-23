@@ -160,7 +160,6 @@ public class Study_programmeValidator extends EObjectValidator {
 	public boolean validateSemester_needsCredits(Semester semester, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		float totalCredits = 0.0f;
 		for(Course course : semester.getCourses()) {
-			System.out.println(course);
 			totalCredits += course.getCredits();
 		}
 		if (totalCredits < 30.0f) {
@@ -214,7 +213,7 @@ public class Study_programmeValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String GROUPED_COURSES__MUST_CONTAIN_ACOURSE__EEXPRESSION = "self.courses>1";
+	protected static final String GROUPED_COURSES__MUST_CONTAIN_ACOURSE__EEXPRESSION = "self.courses -> size() > 0";
 
 	/**
 	 * Validates the mustContainACourse constraint of '<em>Grouped Courses</em>'.
@@ -229,7 +228,7 @@ public class Study_programmeValidator extends EObjectValidator {
 				 groupedCourses,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "http://www.eclipse.org/acceleo/query/1.0",
 				 "mustContainACourse",
 				 GROUPED_COURSES__MUST_CONTAIN_ACOURSE__EEXPRESSION,
 				 Diagnostic.ERROR,

@@ -516,8 +516,8 @@ public class Study_programmePackageImpl extends EPackageImpl implements Study_pr
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
-		// http://www.eclipse.org/emf/2002/Ecore/OCL
-		createOCLAnnotations();
+		// http://www.eclipse.org/acceleo/query/1.0
+		create_1Annotations();
 	}
 
 	/**
@@ -532,7 +532,7 @@ public class Study_programmePackageImpl extends EPackageImpl implements Study_pr
 		  (this,
 		   source,
 		   new String[] {
-			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+			   "validationDelegates", "http://www.eclipse.org/acceleo/query/1.0"
 		   });
 		addAnnotation
 		  (semesterEClass,
@@ -549,18 +549,18 @@ public class Study_programmePackageImpl extends EPackageImpl implements Study_pr
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
+	 * Initializes the annotations for <b>http://www.eclipse.org/acceleo/query/1.0</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createOCLAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+	protected void create_1Annotations() {
+		String source = "http://www.eclipse.org/acceleo/query/1.0";
 		addAnnotation
 		  (groupedCoursesEClass,
 		   source,
 		   new String[] {
-			   "mustContainACourse", "self.courses>1"
+			   "mustContainACourse", "self.courses -> size() > 0"
 		   });
 	}
 

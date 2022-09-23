@@ -203,7 +203,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 		if (this.name == null) {
 			return null;
 		}
-		return getCode() + getName();
+		return getCode() + " " + getName().get(0);
 	}
 
 	/**

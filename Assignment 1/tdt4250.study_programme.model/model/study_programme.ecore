@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="study_programme" nsURI="platform:/plugin/tdt4250.study_programme.model/model/study_programme.ecore"
     nsPrefix="study_programme">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/acceleo/query/1.0"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="NTNU">
     <eStructuralFeatures xsi:type="ecore:EReference" name="programmes" upperBound="-1"
@@ -51,8 +51,8 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="mustContainACourse"/>
     </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="mustContainACourse" value="self.courses>1"/>
+    <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
+      <details key="mustContainACourse" value="self.courses -> size() > 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
         eType="#//Course"/>
