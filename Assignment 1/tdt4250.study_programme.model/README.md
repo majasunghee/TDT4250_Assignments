@@ -46,13 +46,21 @@ The files that have been changed to implement our model are the following:
 ### NTNU model
 This is an instance of a model that represents the study plan for the specialization Databases and Search in the Informatics master. The model contains all the generated courses, specializations, semesters, and grouped courses.
 
+![Assignment_1_NTNU_model](/uploads/602306d2ede5ca313ffa32f575175ab7/Assignment_1_NTNU_model.png)
 
+The following is a screenshot of the corresponding web page.
+
+![Assignment1_modelled_webpage](/uploads/72ae930574b9da087939308865112ad7/Assignment1_modelled_webpage.png)
 
 ### Specialization model
 This model is from the same instance as the NTNU model. It provides a better view of how a specialization is set up.
 
+![Assignment_1_specialization_model](/uploads/d1f14913ca033822cd0625116649a2aa/Assignment_1_specialization_model.png)
+
 ### Semester model
 This model is from the same instance as the NTNU model. It provides a better view of how a semester is set up.
+
+![Assignment_1_semester_model](/uploads/f096a651f05f230b7d643784fa3852e5/Assignment_1_semester_model.png)
 
 ## Authors
 Maja Sung Hee Jenssen and Phajsi Halvorsen
