@@ -1,2 +1,2 @@
-#Repo
-This repo will contain repoes for all assignment for the course.
+# Repository
+This repository will contain repositories for all individual assignments in the course TDT4250 - Advanced Software Design.
