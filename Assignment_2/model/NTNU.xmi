@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<study_programme:University
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:study_programme="platform:/plugin/tdt4250.study_programme.model/model/study_programme.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250.study_programme.model/model/study_programme.ecore study_programme.ecore">
+  <programmes>
+    <name>Master of Science in Informatics (2-year)</name>
+    <specializations
+        name="Databases and Search">
+      <semesters
+          courses="//@courses.2 //@courses.1 //@courses.0 //@courses.4 //@courses.5">
+        <name>Year 1, autumn</name>
+      </semesters>
+      <semesters
+          courses="//@courses.13 //@courses.14 //@courses.12 //@courses.18">
+        <name>Year 1, spring</name>
+      </semesters>
+      <semesters
+          courses="//@courses.19 //@courses.20 //@courses.7">
+        <name>Year 2, autumn</name>
+      </semesters>
+      <semesters
+          courses="//@courses.21">
+        <name>Year 2, spring</name>
+      </semesters>
+      <semesters
+          courses="//@courses.10 //@courses.17 //@courses.7 //@courses.11 //@courses.3 //@courses.14">
+        <name>toValidate</name>
+      </semesters>
+    </specializations>
+  </programmes>
+  <courses code="TDT4225"
+      credits="7.5">
+    <name>Very Large, Distributed Data Volumes</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="HMS0009">
+    <name>Health, Safety and Environment (HSE) course for 1st year students</name>
+    <examType>Passed/Not Passed</examType>
+  </courses>
+  <courses code="TDT4117"
+      credits="7.5">
+    <name>Information Retrieval</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4225"
+      credits="7.5">
+    <name>Very Large, Distributed Data Volumes</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4237"
+      credits="7.5">
+    <name>Software Security and Data Privacy</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="IT2810"
+      credits="7.5">
+    <name>Web Development</name>
+    <examType>Portfolio Assessment</examType>
+  </courses>
+  <courses code="TDT4136"
+      credits="7.5">
+    <name>Introduction to Artificial Intelligence</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4200"
+      credits="7.5">
+    <name>Parallel Computing</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4250"
+      credits="7.5">
+    <name>Advanced Software Design</name>
+    <examType>Portfolio Assessment</examType>
+  </courses>
+  <courses code="TDT4259"
+      credits="7.5">
+    <name>Applied Data Science</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4287"
+      credits="7.5">
+    <name>Algorithms for Bioinformatics</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4150"
+      credits="7.5">
+    <name>Advanced Database Management Systems&#xD;
+</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4305"
+      credits="7.5">
+    <name>Big Data Architecture</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="IT3010"
+      credits="7.5">
+    <name>Empirical research methodologies in IT and digitalization</name>
+    <examType>Portfolio Assessment</examType>
+  </courses>
+  <courses code="TDT4300"
+      credits="7.5">
+    <name>Data Warehousing and Data Mining</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="IT3030"
+      credits="7.5">
+    <name>Deep Learning</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4205"
+      credits="7.5">
+    <name>Compiler Construction</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TDT4215"
+      credits="7.5">
+    <name>Recommender Systems&#xD;
+Recommender Systems</name>
+    <examType>Written exam</examType>
+  </courses>
+  <courses code="TPK4851"
+      credits="7.5">
+    <name>Experts in Teamwork</name>
+    <examType>Portfolio Assessment</examType>
+  </courses>
+  <courses code="IT3915"
+      credits="15.0">
+    <name>Master in Informatics, Preparatory Project</name>
+    <examType>Passed/Not Passed</examType>
+  </courses>
+  <courses code="IT3020"
+      credits="7.5">
+    <name>Current Topics in Informatics</name>
+    <examType>Portfolio Assessment</examType>
+  </courses>
+  <courses code="IT3920"
+      credits="30.0">
+    <name>Master Thesis for MSIT</name>
+    <examType>Portfolio Assessment</examType>
+  </courses>
+</study_programme:University>
