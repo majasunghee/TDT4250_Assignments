@@ -34,7 +34,7 @@ public interface Course extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_Name()
-	 * @model required="true"
+	 * @model required="true" upper="2"
 	 * @generated
 	 */
 	EList<String> getName();
@@ -68,7 +68,7 @@ public interface Course extends EObject {
 	 * @return the value of the '<em>Credits</em>' attribute.
 	 * @see #setCredits(float)
 	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_Credits()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	float getCredits();
@@ -85,25 +85,28 @@ public interface Course extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Exam Type</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * The list contents are of type {@link tdt4250.study_programme.examType}.
+	 * The literals are from the enumeration {@link tdt4250.study_programme.examType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exam Type</em>' attribute list.
+	 * @see tdt4250.study_programme.examType
 	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_ExamType()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getExamType();
+	EList<examType> getExamType();
 
 	/**
-	 * Returns the value of the '<em><b>Course ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Course ID</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Course ID</em>' attribute.
+	 * @return the value of the '<em>Course ID</em>' attribute list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_CourseID()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model upper="2" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	String getCourseID();
+	EList<String> getCourseID();
 
 } // Course

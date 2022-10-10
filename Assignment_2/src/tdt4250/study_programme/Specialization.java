@@ -25,26 +25,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Specialization extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @return the value of the '<em>Name</em>' attribute list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getSpecialization_Name()
-	 * @model
+	 * @model required="true" upper="2"
 	 * @generated
 	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link tdt4250.study_programme.Specialization#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
+	EList<String> getName();
 
 	/**
 	 * Returns the value of the '<em><b>Semesters</b></em>' containment reference list.
@@ -53,7 +43,7 @@ public interface Specialization extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Semesters</em>' containment reference list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getSpecialization_Semesters()
-	 * @model containment="true" required="true" upper="6"
+	 * @model containment="true" lower="4" upper="6"
 	 * @generated
 	 */
 	EList<Semester> getSemesters();

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import tdt4250.study_programme.Course;
 import tdt4250.study_programme.Study_programmePackage;
+import tdt4250.study_programme.examType;
 
 /**
  * <!-- begin-user-doc -->
@@ -94,17 +95,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> examType;
-
-	/**
-	 * The default value of the '{@link #getCourseID() <em>Course ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCourseID()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COURSE_ID_EDEFAULT = null;
+	protected EList<examType> examType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,9 +175,9 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getExamType() {
+	public EList<examType> getExamType() {
 		if (examType == null) {
-			examType = new EDataTypeUniqueEList<String>(String.class, this, Study_programmePackage.COURSE__EXAM_TYPE);
+			examType = new EDataTypeUniqueEList<examType>(examType.class, this, Study_programmePackage.COURSE__EXAM_TYPE);
 		}
 		return examType;
 	}
@@ -249,7 +240,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return;
 			case Study_programmePackage.COURSE__EXAM_TYPE:
 				getExamType().clear();
-				getExamType().addAll((Collection<? extends String>)newValue);
+				getExamType().addAll((Collection<? extends examType>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -296,7 +287,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case Study_programmePackage.COURSE__EXAM_TYPE:
 				return examType != null && !examType.isEmpty();
 			case Study_programmePackage.COURSE__COURSE_ID:
-				return COURSE_ID_EDEFAULT == null ? getCourseID() != null : !COURSE_ID_EDEFAULT.equals(getCourseID());
+				return !getCourseID().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
