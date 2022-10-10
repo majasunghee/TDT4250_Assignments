@@ -15,7 +15,7 @@ public class ManualCodeExample {
 		//Create course instance
 		Course course = Study_programmeFactory.eINSTANCE.createCourse();
 		course.getName().add("Informatikk prosjektarbeid 1");
-		//course.getName().add("Informatics project 1");
+		course.getName().add("Informatics project 1");
 		course.setCode("IT1901");
 		course.setCredits(7.5f);
 		
@@ -25,7 +25,7 @@ public class ManualCodeExample {
 		course2.setCode("IT1900");
 		course2.setCredits(7.5f);
 		
-		//System.out.println(course2.getFullCourseName().toString());
+		System.out.println(course.getFullCourseName().toString());
 		
 
 		//Create semester instance
@@ -45,7 +45,7 @@ public class ManualCodeExample {
 		Semester sem = Study_programmeFactory.eINSTANCE.createSemester();
 		
 		sem.getGroupedCourses().add(groupedCourses);
-		System.out.println(sem);
+		//System.out.println(sem.getName());
 		
 		//Testing code for validator
 		float totalCredits = 0.0f;

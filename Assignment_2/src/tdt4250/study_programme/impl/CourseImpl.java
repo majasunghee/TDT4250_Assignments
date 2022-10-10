@@ -5,6 +5,7 @@ package tdt4250.study_programme.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -184,14 +185,19 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getFullCourseName() {
 		// TODO: implement this method to return the 'Full Course Name' attribute list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
 		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		EList<String> fullCourseName = new BasicEList<String>();
+		for (String name : getName()) {
+			fullCourseName.add(getCode()+ ' '+ name);
+		}
+		return fullCourseName;
 	}
 
 	/**
