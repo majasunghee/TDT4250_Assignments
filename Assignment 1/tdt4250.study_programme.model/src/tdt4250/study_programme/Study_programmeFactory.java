@@ -22,13 +22,13 @@ public interface Study_programmeFactory extends EFactory {
 	Study_programmeFactory eINSTANCE = tdt4250.study_programme.impl.Study_programmeFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>NTNU</em>'.
+	 * Returns a new object of class '<em>University</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>NTNU</em>'.
+	 * @return a new object of class '<em>University</em>'.
 	 * @generated
 	 */
-	NTNU createNTNU();
+	University createUniversity();
 
 	/**
 	 * Returns a new object of class '<em>Study Programme</em>'.

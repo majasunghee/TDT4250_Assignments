@@ -68,8 +68,8 @@ public class Study_programmeAdapterFactory extends AdapterFactoryImpl {
 	protected Study_programmeSwitch<Adapter> modelSwitch =
 		new Study_programmeSwitch<Adapter>() {
 			@Override
-			public Adapter caseNTNU(NTNU object) {
-				return createNTNUAdapter();
+			public Adapter caseUniversity(University object) {
+				return createUniversityAdapter();
 			}
 			@Override
 			public Adapter caseStudyProgramme(StudyProgramme object) {
@@ -112,16 +112,16 @@ public class Study_programmeAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link tdt4250.study_programme.NTNU <em>NTNU</em>}'.
+	 * Creates a new adapter for an object of class '{@link tdt4250.study_programme.University <em>University</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see tdt4250.study_programme.NTNU
+	 * @see tdt4250.study_programme.University
 	 * @generated
 	 */
-	public Adapter createNTNUAdapter() {
+	public Adapter createUniversityAdapter() {
 		return null;
 	}
 

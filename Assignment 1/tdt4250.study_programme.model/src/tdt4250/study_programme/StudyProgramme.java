@@ -32,7 +32,7 @@ public interface StudyProgramme extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getStudyProgramme_Name()
-	 * @model required="true"
+	 * @model required="true" upper="2"
 	 * @generated
 	 */
 	EList<String> getName();
@@ -44,7 +44,7 @@ public interface StudyProgramme extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Specializations</em>' containment reference list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getStudyProgramme_Specializations()
-	 * @model containment="true"
+	 * @model containment="true" upper="4"
 	 * @generated
 	 */
 	EList<Specialization> getSpecializations();
@@ -56,7 +56,7 @@ public interface StudyProgramme extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Semesters</em>' containment reference list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getStudyProgramme_Semesters()
-	 * @model containment="true"
+	 * @model containment="true" upper="10"
 	 * @generated
 	 */
 	EList<Semester> getSemesters();

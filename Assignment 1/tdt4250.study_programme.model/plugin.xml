@@ -10,8 +10,7 @@
       <!-- @generated study_programme -->
       <package
             uri="platform:/plugin/tdt4250.study_programme.model/model/study_programme.ecore"
-            class="tdt4250.study_programme.Study_programmePackage"
-            genModel="model/study_programme.genmodel"/>
+            class="tdt4250.study_programme.Study_programmePackage"/>
    </extension>
 
 </plugin>

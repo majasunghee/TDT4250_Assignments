@@ -14,16 +14,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import tdt4250.study_programme.Course;
 import tdt4250.study_programme.GroupedCourses;
+import tdt4250.study_programme.Season;
 import tdt4250.study_programme.Semester;
-import tdt4250.study_programme.Specialization;
 import tdt4250.study_programme.Study_programmePackage;
 
 /**
@@ -34,44 +29,34 @@ import tdt4250.study_programme.Study_programmePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link tdt4250.study_programme.impl.SemesterImpl#getName <em>Name</em>}</li>
- *   <li>{@link tdt4250.study_programme.impl.SemesterImpl#getCourses <em>Courses</em>}</li>
- *   <li>{@link tdt4250.study_programme.impl.SemesterImpl#getSpecializations <em>Specializations</em>}</li>
+ *   <li>{@link tdt4250.study_programme.impl.SemesterImpl#getYear <em>Year</em>}</li>
  *   <li>{@link tdt4250.study_programme.impl.SemesterImpl#getGroupedCourses <em>Grouped Courses</em>}</li>
+ *   <li>{@link tdt4250.study_programme.impl.SemesterImpl#getSeason <em>Season</em>}</li>
+ *   <li>{@link tdt4250.study_programme.impl.SemesterImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SemesterImpl extends MinimalEObjectImpl.Container implements Semester {
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute list.
+	 * The default value of the '{@link #getYear() <em>Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getYear()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> name;
+	protected static final int YEAR_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getCourses() <em>Courses</em>}' reference list.
+	 * The cached value of the '{@link #getYear() <em>Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCourses()
+	 * @see #getYear()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Course> courses;
-
-	/**
-	 * The cached value of the '{@link #getSpecializations() <em>Specializations</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSpecializations()
-	 * @generated
-	 * @ordered
-	 */
-	protected Specialization specializations;
+	protected int year = YEAR_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getGroupedCourses() <em>Grouped Courses</em>}' containment reference list.
@@ -82,6 +67,36 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * @ordered
 	 */
 	protected EList<GroupedCourses> groupedCourses;
+
+	/**
+	 * The default value of the '{@link #getSeason() <em>Season</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSeason()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Season SEASON_EDEFAULT = Season.HØST;
+
+	/**
+	 * The cached value of the '{@link #getSeason() <em>Season</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSeason()
+	 * @generated
+	 * @ordered
+	 */
+	protected Season season = SEASON_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,11 +122,8 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getName() {
-		if (name == null) {
-			name = new EDataTypeUniqueEList<String>(String.class, this, Study_programmePackage.SEMESTER__NAME);
-		}
-		return name;
+	public int getYear() {
+		return year;
 	}
 
 	/**
@@ -119,11 +131,11 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Course> getCourses() {
-		if (courses == null) {
-			courses = new EObjectResolvingEList<Course>(Course.class, this, Study_programmePackage.SEMESTER__COURSES);
-		}
-		return courses;
+	public void setYear(int newYear) {
+		int oldYear = year;
+		year = newYear;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Study_programmePackage.SEMESTER__YEAR, oldYear, year));
 	}
 
 	/**
@@ -131,42 +143,10 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Specialization getSpecializations() {
-		return specializations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSpecializations(Specialization newSpecializations, NotificationChain msgs) {
-		Specialization oldSpecializations = specializations;
-		specializations = newSpecializations;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Study_programmePackage.SEMESTER__SPECIALIZATIONS, oldSpecializations, newSpecializations);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSpecializations(Specialization newSpecializations) {
-		if (newSpecializations != specializations) {
-			NotificationChain msgs = null;
-			if (specializations != null)
-				msgs = ((InternalEObject)specializations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Study_programmePackage.SEMESTER__SPECIALIZATIONS, null, msgs);
-			if (newSpecializations != null)
-				msgs = ((InternalEObject)newSpecializations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Study_programmePackage.SEMESTER__SPECIALIZATIONS, null, msgs);
-			msgs = basicSetSpecializations(newSpecializations, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Study_programmePackage.SEMESTER__SPECIALIZATIONS, newSpecializations, newSpecializations));
+	public String getName() {
+		// TODO: implement this method to return the 'Name' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -186,11 +166,30 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Season getSeason() {
+		return season;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSeason(Season newSeason) {
+		Season oldSeason = season;
+		season = newSeason == null ? SEASON_EDEFAULT : newSeason;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Study_programmePackage.SEMESTER__SEASON, oldSeason, season));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Study_programmePackage.SEMESTER__SPECIALIZATIONS:
-				return basicSetSpecializations(null, msgs);
 			case Study_programmePackage.SEMESTER__GROUPED_COURSES:
 				return ((InternalEList<?>)getGroupedCourses()).basicRemove(otherEnd, msgs);
 		}
@@ -205,14 +204,14 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Study_programmePackage.SEMESTER__NAME:
-				return getName();
-			case Study_programmePackage.SEMESTER__COURSES:
-				return getCourses();
-			case Study_programmePackage.SEMESTER__SPECIALIZATIONS:
-				return getSpecializations();
+			case Study_programmePackage.SEMESTER__YEAR:
+				return getYear();
 			case Study_programmePackage.SEMESTER__GROUPED_COURSES:
 				return getGroupedCourses();
+			case Study_programmePackage.SEMESTER__SEASON:
+				return getSeason();
+			case Study_programmePackage.SEMESTER__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -226,20 +225,15 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Study_programmePackage.SEMESTER__NAME:
-				getName().clear();
-				getName().addAll((Collection<? extends String>)newValue);
-				return;
-			case Study_programmePackage.SEMESTER__COURSES:
-				getCourses().clear();
-				getCourses().addAll((Collection<? extends Course>)newValue);
-				return;
-			case Study_programmePackage.SEMESTER__SPECIALIZATIONS:
-				setSpecializations((Specialization)newValue);
+			case Study_programmePackage.SEMESTER__YEAR:
+				setYear((Integer)newValue);
 				return;
 			case Study_programmePackage.SEMESTER__GROUPED_COURSES:
 				getGroupedCourses().clear();
 				getGroupedCourses().addAll((Collection<? extends GroupedCourses>)newValue);
+				return;
+			case Study_programmePackage.SEMESTER__SEASON:
+				setSeason((Season)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -253,17 +247,14 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Study_programmePackage.SEMESTER__NAME:
-				getName().clear();
-				return;
-			case Study_programmePackage.SEMESTER__COURSES:
-				getCourses().clear();
-				return;
-			case Study_programmePackage.SEMESTER__SPECIALIZATIONS:
-				setSpecializations((Specialization)null);
+			case Study_programmePackage.SEMESTER__YEAR:
+				setYear(YEAR_EDEFAULT);
 				return;
 			case Study_programmePackage.SEMESTER__GROUPED_COURSES:
 				getGroupedCourses().clear();
+				return;
+			case Study_programmePackage.SEMESTER__SEASON:
+				setSeason(SEASON_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -277,14 +268,14 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Study_programmePackage.SEMESTER__NAME:
-				return name != null && !name.isEmpty();
-			case Study_programmePackage.SEMESTER__COURSES:
-				return courses != null && !courses.isEmpty();
-			case Study_programmePackage.SEMESTER__SPECIALIZATIONS:
-				return specializations != null;
+			case Study_programmePackage.SEMESTER__YEAR:
+				return year != YEAR_EDEFAULT;
 			case Study_programmePackage.SEMESTER__GROUPED_COURSES:
 				return groupedCourses != null && !groupedCourses.isEmpty();
+			case Study_programmePackage.SEMESTER__SEASON:
+				return season != SEASON_EDEFAULT;
+			case Study_programmePackage.SEMESTER__NAME:
+				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -299,8 +290,10 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (year: ");
+		result.append(year);
+		result.append(", season: ");
+		result.append(season);
 		result.append(')');
 		return result.toString();
 	}

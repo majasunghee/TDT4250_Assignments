@@ -85,8 +85,8 @@ public class Study_programmeValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
-			case Study_programmePackage.NTNU:
-				return validateNTNU((NTNU)value, diagnostics, context);
+			case Study_programmePackage.UNIVERSITY:
+				return validateUniversity((University)value, diagnostics, context);
 			case Study_programmePackage.STUDY_PROGRAMME:
 				return validateStudyProgramme((StudyProgramme)value, diagnostics, context);
 			case Study_programmePackage.SPECIALIZATION:
@@ -99,6 +99,10 @@ public class Study_programmeValidator extends EObjectValidator {
 				return validateGroupedCourses((GroupedCourses)value, diagnostics, context);
 			case Study_programmePackage.COURSE_TYPE:
 				return validatecourseType((courseType)value, diagnostics, context);
+			case Study_programmePackage.EXAM_TYPE:
+				return validateexamType((examType)value, diagnostics, context);
+			case Study_programmePackage.SEASON:
+				return validateSeason((Season)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -109,8 +113,8 @@ public class Study_programmeValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateNTNU(NTNU ntnu, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(ntnu, diagnostics, context);
+	public boolean validateUniversity(University university, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(university, diagnostics, context);
 	}
 
 	/**
@@ -242,6 +246,24 @@ public class Study_programmeValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatecourseType(courseType courseType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateexamType(examType examType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSeason(Season season, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
