@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 
 import tdt4250.study_programme.Course;
 import tdt4250.study_programme.GroupedCourses;
+import tdt4250.study_programme.Season;
 import tdt4250.study_programme.Semester;
 import tdt4250.study_programme.Study_programmeFactory;
 
@@ -44,8 +45,12 @@ public class ManualCodeExample {
 		
 		Semester sem = Study_programmeFactory.eINSTANCE.createSemester();
 		
+		//Season season = Study_programmeFactory.eINSTANCE.createSeason();
+		
 		sem.getGroupedCourses().add(groupedCourses);
-		//System.out.println(sem.getName());
+		sem.setYear(1);
+		sem.setSeason(Season.VÅR);
+		System.out.println(sem.getName());
 		
 		//Testing code for validator
 		float totalCredits = 0.0f;
