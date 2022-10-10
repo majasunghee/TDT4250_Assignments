@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link tdt4250.study_programme.Course#getCode <em>Code</em>}</li>
  *   <li>{@link tdt4250.study_programme.Course#getCredits <em>Credits</em>}</li>
  *   <li>{@link tdt4250.study_programme.Course#getExamType <em>Exam Type</em>}</li>
- *   <li>{@link tdt4250.study_programme.Course#getCourseID <em>Course ID</em>}</li>
+ *   <li>{@link tdt4250.study_programme.Course#getFullCourseName <em>Full Course Name</em>}</li>
  * </ul>
  *
  * @see tdt4250.study_programme.Study_programmePackage#getCourse()
@@ -34,7 +34,7 @@ public interface Course extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_Name()
-	 * @model required="true"
+	 * @model required="true" upper="2"
 	 * @generated
 	 */
 	EList<String> getName();
@@ -68,7 +68,7 @@ public interface Course extends EObject {
 	 * @return the value of the '<em>Credits</em>' attribute.
 	 * @see #setCredits(float)
 	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_Credits()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	float getCredits();
@@ -85,25 +85,28 @@ public interface Course extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Exam Type</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * The list contents are of type {@link tdt4250.study_programme.examType}.
+	 * The literals are from the enumeration {@link tdt4250.study_programme.examType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exam Type</em>' attribute list.
+	 * @see tdt4250.study_programme.examType
 	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_ExamType()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getExamType();
+	EList<examType> getExamType();
 
 	/**
-	 * Returns the value of the '<em><b>Course ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Full Course Name</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Course ID</em>' attribute.
-	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_CourseID()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @return the value of the '<em>Full Course Name</em>' attribute list.
+	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_FullCourseName()
+	 * @model upper="2" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	String getCourseID();
+	EList<String> getFullCourseName();
 
 } // Course

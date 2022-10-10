@@ -5,7 +5,6 @@ package tdt4250.study_programme.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -17,6 +16,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import tdt4250.study_programme.Course;
 import tdt4250.study_programme.Study_programmePackage;
+import tdt4250.study_programme.examType;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import tdt4250.study_programme.Study_programmePackage;
  *   <li>{@link tdt4250.study_programme.impl.CourseImpl#getCode <em>Code</em>}</li>
  *   <li>{@link tdt4250.study_programme.impl.CourseImpl#getCredits <em>Credits</em>}</li>
  *   <li>{@link tdt4250.study_programme.impl.CourseImpl#getExamType <em>Exam Type</em>}</li>
- *   <li>{@link tdt4250.study_programme.impl.CourseImpl#getCourseID <em>Course ID</em>}</li>
+ *   <li>{@link tdt4250.study_programme.impl.CourseImpl#getFullCourseName <em>Full Course Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,17 +94,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> examType;
-
-	/**
-	 * The default value of the '{@link #getCourseID() <em>Course ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCourseID()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COURSE_ID_EDEFAULT = null;
+	protected EList<examType> examType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,9 +174,9 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getExamType() {
+	public EList<examType> getExamType() {
 		if (examType == null) {
-			examType = new EDataTypeUniqueEList<String>(String.class, this, Study_programmePackage.COURSE__EXAM_TYPE);
+			examType = new EDataTypeUniqueEList<examType>(examType.class, this, Study_programmePackage.COURSE__EXAM_TYPE);
 		}
 		return examType;
 	}
@@ -194,16 +184,14 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public String getCourseID() {
-		if (this.code == null) {
-			return null;
-		}
-		if (this.name == null) {
-			return null;
-		}
-		return getCode() + " " + getName().get(0);
+	public EList<String> getFullCourseName() {
+		// TODO: implement this method to return the 'Full Course Name' attribute list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -222,8 +210,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return getCredits();
 			case Study_programmePackage.COURSE__EXAM_TYPE:
 				return getExamType();
-			case Study_programmePackage.COURSE__COURSE_ID:
-				return getCourseID();
+			case Study_programmePackage.COURSE__FULL_COURSE_NAME:
+				return getFullCourseName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -249,7 +237,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return;
 			case Study_programmePackage.COURSE__EXAM_TYPE:
 				getExamType().clear();
-				getExamType().addAll((Collection<? extends String>)newValue);
+				getExamType().addAll((Collection<? extends examType>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -295,8 +283,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return credits != CREDITS_EDEFAULT;
 			case Study_programmePackage.COURSE__EXAM_TYPE:
 				return examType != null && !examType.isEmpty();
-			case Study_programmePackage.COURSE__COURSE_ID:
-				return COURSE_ID_EDEFAULT == null ? getCourseID() != null : !COURSE_ID_EDEFAULT.equals(getCourseID());
+			case Study_programmePackage.COURSE__FULL_COURSE_NAME:
+				return !getFullCourseName().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

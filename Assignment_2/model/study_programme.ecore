@@ -45,7 +45,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="examType" upperBound="-1"
         eType="#//examType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="courseID" upperBound="2"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullCourseName" upperBound="2"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
         volatile="true" transient="true" derived="true"/>
   </eClassifiers>

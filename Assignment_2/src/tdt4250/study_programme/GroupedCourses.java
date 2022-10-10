@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link tdt4250.study_programme.GroupedCourses#getCourses <em>Courses</em>}</li>
- *   <li>{@link tdt4250.study_programme.GroupedCourses#getName <em>Name</em>}</li>
  *   <li>{@link tdt4250.study_programme.GroupedCourses#getType <em>Type</em>}</li>
  * </ul>
  *
@@ -33,22 +32,10 @@ public interface GroupedCourses extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Courses</em>' reference list.
 	 * @see tdt4250.study_programme.Study_programmePackage#getGroupedCourses_Courses()
-	 * @model
-	 * @generated
-	 */
-	EList<Course> getCourses();
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute list.
-	 * @see tdt4250.study_programme.Study_programmePackage#getGroupedCourses_Name()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getName();
+	EList<Course> getCourses();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

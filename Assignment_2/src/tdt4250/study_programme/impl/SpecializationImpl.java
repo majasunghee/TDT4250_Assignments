@@ -4,7 +4,6 @@ package tdt4250.study_programme.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -12,9 +11,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -38,24 +37,14 @@ import tdt4250.study_programme.Study_programmePackage;
  */
 public class SpecializationImpl extends MinimalEObjectImpl.Container implements Specialization {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
+	protected EList<String> name;
 
 	/**
 	 * The cached value of the '{@link #getSemesters() <em>Semesters</em>}' containment reference list.
@@ -91,20 +80,11 @@ public class SpecializationImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public EList<String> getName() {
+		if (name == null) {
+			name = new EDataTypeUniqueEList<String>(String.class, this, Study_programmePackage.SPECIALIZATION__NAME);
+		}
 		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Study_programmePackage.SPECIALIZATION__NAME, oldName, name));
 	}
 
 	/**
@@ -159,7 +139,8 @@ public class SpecializationImpl extends MinimalEObjectImpl.Container implements 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Study_programmePackage.SPECIALIZATION__NAME:
-				setName((String)newValue);
+				getName().clear();
+				getName().addAll((Collection<? extends String>)newValue);
 				return;
 			case Study_programmePackage.SPECIALIZATION__SEMESTERS:
 				getSemesters().clear();
@@ -178,7 +159,7 @@ public class SpecializationImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case Study_programmePackage.SPECIALIZATION__NAME:
-				setName(NAME_EDEFAULT);
+				getName().clear();
 				return;
 			case Study_programmePackage.SPECIALIZATION__SEMESTERS:
 				getSemesters().clear();
@@ -196,7 +177,7 @@ public class SpecializationImpl extends MinimalEObjectImpl.Container implements 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case Study_programmePackage.SPECIALIZATION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+				return name != null && !name.isEmpty();
 			case Study_programmePackage.SPECIALIZATION__SEMESTERS:
 				return semesters != null && !semesters.isEmpty();
 		}

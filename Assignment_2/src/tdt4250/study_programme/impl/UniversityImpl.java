@@ -17,25 +17,25 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import tdt4250.study_programme.Course;
-import tdt4250.study_programme.NTNU;
 import tdt4250.study_programme.StudyProgramme;
 import tdt4250.study_programme.Study_programmePackage;
+import tdt4250.study_programme.University;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>NTNU</b></em>'.
+ * An implementation of the model object '<em><b>University</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link tdt4250.study_programme.impl.NTNUImpl#getProgrammes <em>Programmes</em>}</li>
- *   <li>{@link tdt4250.study_programme.impl.NTNUImpl#getCourses <em>Courses</em>}</li>
+ *   <li>{@link tdt4250.study_programme.impl.UniversityImpl#getProgrammes <em>Programmes</em>}</li>
+ *   <li>{@link tdt4250.study_programme.impl.UniversityImpl#getCourses <em>Courses</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
+public class UniversityImpl extends MinimalEObjectImpl.Container implements University {
 	/**
 	 * The cached value of the '{@link #getProgrammes() <em>Programmes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -61,7 +61,7 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NTNUImpl() {
+	protected UniversityImpl() {
 		super();
 	}
 
@@ -72,7 +72,7 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Study_programmePackage.Literals.NTNU;
+		return Study_programmePackage.Literals.UNIVERSITY;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	 */
 	public EList<StudyProgramme> getProgrammes() {
 		if (programmes == null) {
-			programmes = new EObjectContainmentEList<StudyProgramme>(StudyProgramme.class, this, Study_programmePackage.NTNU__PROGRAMMES);
+			programmes = new EObjectContainmentEList<StudyProgramme>(StudyProgramme.class, this, Study_programmePackage.UNIVERSITY__PROGRAMMES);
 		}
 		return programmes;
 	}
@@ -94,7 +94,7 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	 */
 	public EList<Course> getCourses() {
 		if (courses == null) {
-			courses = new EObjectContainmentEList<Course>(Course.class, this, Study_programmePackage.NTNU__COURSES);
+			courses = new EObjectContainmentEList<Course>(Course.class, this, Study_programmePackage.UNIVERSITY__COURSES);
 		}
 		return courses;
 	}
@@ -107,9 +107,9 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Study_programmePackage.NTNU__PROGRAMMES:
+			case Study_programmePackage.UNIVERSITY__PROGRAMMES:
 				return ((InternalEList<?>)getProgrammes()).basicRemove(otherEnd, msgs);
-			case Study_programmePackage.NTNU__COURSES:
+			case Study_programmePackage.UNIVERSITY__COURSES:
 				return ((InternalEList<?>)getCourses()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -123,9 +123,9 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Study_programmePackage.NTNU__PROGRAMMES:
+			case Study_programmePackage.UNIVERSITY__PROGRAMMES:
 				return getProgrammes();
-			case Study_programmePackage.NTNU__COURSES:
+			case Study_programmePackage.UNIVERSITY__COURSES:
 				return getCourses();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -140,11 +140,11 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Study_programmePackage.NTNU__PROGRAMMES:
+			case Study_programmePackage.UNIVERSITY__PROGRAMMES:
 				getProgrammes().clear();
 				getProgrammes().addAll((Collection<? extends StudyProgramme>)newValue);
 				return;
-			case Study_programmePackage.NTNU__COURSES:
+			case Study_programmePackage.UNIVERSITY__COURSES:
 				getCourses().clear();
 				getCourses().addAll((Collection<? extends Course>)newValue);
 				return;
@@ -160,10 +160,10 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Study_programmePackage.NTNU__PROGRAMMES:
+			case Study_programmePackage.UNIVERSITY__PROGRAMMES:
 				getProgrammes().clear();
 				return;
-			case Study_programmePackage.NTNU__COURSES:
+			case Study_programmePackage.UNIVERSITY__COURSES:
 				getCourses().clear();
 				return;
 		}
@@ -178,12 +178,12 @@ public class NTNUImpl extends MinimalEObjectImpl.Container implements NTNU {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Study_programmePackage.NTNU__PROGRAMMES:
+			case Study_programmePackage.UNIVERSITY__PROGRAMMES:
 				return programmes != null && !programmes.isEmpty();
-			case Study_programmePackage.NTNU__COURSES:
+			case Study_programmePackage.UNIVERSITY__COURSES:
 				return courses != null && !courses.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //NTNUImpl
+} //UniversityImpl

@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import tdt4250.study_programme.Course;
@@ -30,7 +29,6 @@ import tdt4250.study_programme.courseType;
  * </p>
  * <ul>
  *   <li>{@link tdt4250.study_programme.impl.GroupedCoursesImpl#getCourses <em>Courses</em>}</li>
- *   <li>{@link tdt4250.study_programme.impl.GroupedCoursesImpl#getName <em>Name</em>}</li>
  *   <li>{@link tdt4250.study_programme.impl.GroupedCoursesImpl#getType <em>Type</em>}</li>
  * </ul>
  *
@@ -46,16 +44,6 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<Course> courses;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> name;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -113,18 +101,6 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getName() {
-		if (name == null) {
-			name = new EDataTypeUniqueEList<String>(String.class, this, Study_programmePackage.GROUPED_COURSES__NAME);
-		}
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public courseType getType() {
 		return type;
 	}
@@ -151,8 +127,6 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case Study_programmePackage.GROUPED_COURSES__COURSES:
 				return getCourses();
-			case Study_programmePackage.GROUPED_COURSES__NAME:
-				return getName();
 			case Study_programmePackage.GROUPED_COURSES__TYPE:
 				return getType();
 		}
@@ -172,10 +146,6 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 				getCourses().clear();
 				getCourses().addAll((Collection<? extends Course>)newValue);
 				return;
-			case Study_programmePackage.GROUPED_COURSES__NAME:
-				getName().clear();
-				getName().addAll((Collection<? extends String>)newValue);
-				return;
 			case Study_programmePackage.GROUPED_COURSES__TYPE:
 				setType((courseType)newValue);
 				return;
@@ -194,9 +164,6 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 			case Study_programmePackage.GROUPED_COURSES__COURSES:
 				getCourses().clear();
 				return;
-			case Study_programmePackage.GROUPED_COURSES__NAME:
-				getName().clear();
-				return;
 			case Study_programmePackage.GROUPED_COURSES__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
@@ -214,8 +181,6 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case Study_programmePackage.GROUPED_COURSES__COURSES:
 				return courses != null && !courses.isEmpty();
-			case Study_programmePackage.GROUPED_COURSES__NAME:
-				return name != null && !name.isEmpty();
 			case Study_programmePackage.GROUPED_COURSES__TYPE:
 				return type != TYPE_EDEFAULT;
 		}
@@ -232,9 +197,7 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", type: ");
+		result.append(" (type: ");
 		result.append(type);
 		result.append(')');
 		return result.toString();

@@ -66,9 +66,9 @@ public class Study_programmeSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Study_programmePackage.NTNU: {
-				NTNU ntnu = (NTNU)theEObject;
-				T result = caseNTNU(ntnu);
+			case Study_programmePackage.UNIVERSITY: {
+				University university = (University)theEObject;
+				T result = caseUniversity(university);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -107,17 +107,17 @@ public class Study_programmeSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>NTNU</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>University</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>NTNU</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>University</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNTNU(NTNU object) {
+	public T caseUniversity(University object) {
 		return null;
 	}
 

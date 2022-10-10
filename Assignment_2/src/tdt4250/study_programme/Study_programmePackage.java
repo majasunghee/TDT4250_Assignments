@@ -59,14 +59,14 @@ public interface Study_programmePackage extends EPackage {
 	Study_programmePackage eINSTANCE = tdt4250.study_programme.impl.Study_programmePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link tdt4250.study_programme.impl.NTNUImpl <em>NTNU</em>}' class.
+	 * The meta object id for the '{@link tdt4250.study_programme.impl.UniversityImpl <em>University</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tdt4250.study_programme.impl.NTNUImpl
-	 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getNTNU()
+	 * @see tdt4250.study_programme.impl.UniversityImpl
+	 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getUniversity()
 	 * @generated
 	 */
-	int NTNU = 0;
+	int UNIVERSITY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Programmes</b></em>' containment reference list.
@@ -75,7 +75,7 @@ public interface Study_programmePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NTNU__PROGRAMMES = 0;
+	int UNIVERSITY__PROGRAMMES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Courses</b></em>' containment reference list.
@@ -84,25 +84,25 @@ public interface Study_programmePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NTNU__COURSES = 1;
+	int UNIVERSITY__COURSES = 1;
 
 	/**
-	 * The number of structural features of the '<em>NTNU</em>' class.
+	 * The number of structural features of the '<em>University</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NTNU_FEATURE_COUNT = 2;
+	int UNIVERSITY_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>NTNU</em>' class.
+	 * The number of operations of the '<em>University</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NTNU_OPERATION_COUNT = 0;
+	int UNIVERSITY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link tdt4250.study_programme.impl.StudyProgrammeImpl <em>Study Programme</em>}' class.
@@ -170,7 +170,7 @@ public interface Study_programmePackage extends EPackage {
 	int SPECIALIZATION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -216,31 +216,13 @@ public interface Study_programmePackage extends EPackage {
 	int SEMESTER = 3;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute list.
+	 * The feature id for the '<em><b>Year</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Courses</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEMESTER__COURSES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Specializations</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEMESTER__SPECIALIZATIONS = 2;
+	int SEMESTER__YEAR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Grouped Courses</b></em>' containment reference list.
@@ -249,7 +231,25 @@ public interface Study_programmePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER__GROUPED_COURSES = 3;
+	int SEMESTER__GROUPED_COURSES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Season</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMESTER__SEASON = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMESTER__NAME = 3;
 
 	/**
 	 * The number of structural features of the '<em>Semester</em>' class.
@@ -316,13 +316,13 @@ public interface Study_programmePackage extends EPackage {
 	int COURSE__EXAM_TYPE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Course ID</b></em>' attribute.
+	 * The feature id for the '<em><b>Full Course Name</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE__COURSE_ID = 4;
+	int COURSE__FULL_COURSE_NAME = 4;
 
 	/**
 	 * The number of structural features of the '<em>Course</em>' class.
@@ -362,22 +362,13 @@ public interface Study_programmePackage extends EPackage {
 	int GROUPED_COURSES__COURSES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GROUPED_COURSES__NAME = 1;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUPED_COURSES__TYPE = 2;
+	int GROUPED_COURSES__TYPE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Grouped Courses</em>' class.
@@ -386,7 +377,7 @@ public interface Study_programmePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUPED_COURSES_FEATURE_COUNT = 3;
+	int GROUPED_COURSES_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Grouped Courses</em>' class.
@@ -407,38 +398,58 @@ public interface Study_programmePackage extends EPackage {
 	 */
 	int COURSE_TYPE = 6;
 
-
 	/**
-	 * Returns the meta object for class '{@link tdt4250.study_programme.NTNU <em>NTNU</em>}'.
+	 * The meta object id for the '{@link tdt4250.study_programme.examType <em>exam Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>NTNU</em>'.
-	 * @see tdt4250.study_programme.NTNU
+	 * @see tdt4250.study_programme.examType
+	 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getexamType()
 	 * @generated
 	 */
-	EClass getNTNU();
+	int EXAM_TYPE = 7;
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link tdt4250.study_programme.NTNU#getProgrammes <em>Programmes</em>}'.
+	 * The meta object id for the '{@link tdt4250.study_programme.Season <em>Season</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see tdt4250.study_programme.Season
+	 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getSeason()
+	 * @generated
+	 */
+	int SEASON = 8;
+
+
+	/**
+	 * Returns the meta object for class '{@link tdt4250.study_programme.University <em>University</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>University</em>'.
+	 * @see tdt4250.study_programme.University
+	 * @generated
+	 */
+	EClass getUniversity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link tdt4250.study_programme.University#getProgrammes <em>Programmes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Programmes</em>'.
-	 * @see tdt4250.study_programme.NTNU#getProgrammes()
-	 * @see #getNTNU()
+	 * @see tdt4250.study_programme.University#getProgrammes()
+	 * @see #getUniversity()
 	 * @generated
 	 */
-	EReference getNTNU_Programmes();
+	EReference getUniversity_Programmes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link tdt4250.study_programme.NTNU#getCourses <em>Courses</em>}'.
+	 * Returns the meta object for the containment reference list '{@link tdt4250.study_programme.University#getCourses <em>Courses</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Courses</em>'.
-	 * @see tdt4250.study_programme.NTNU#getCourses()
-	 * @see #getNTNU()
+	 * @see tdt4250.study_programme.University#getCourses()
+	 * @see #getUniversity()
 	 * @generated
 	 */
-	EReference getNTNU_Courses();
+	EReference getUniversity_Courses();
 
 	/**
 	 * Returns the meta object for class '{@link tdt4250.study_programme.StudyProgramme <em>Study Programme</em>}'.
@@ -494,10 +505,10 @@ public interface Study_programmePackage extends EPackage {
 	EClass getSpecialization();
 
 	/**
-	 * Returns the meta object for the attribute '{@link tdt4250.study_programme.Specialization#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute list '{@link tdt4250.study_programme.Specialization#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @return the meta object for the attribute list '<em>Name</em>'.
 	 * @see tdt4250.study_programme.Specialization#getName()
 	 * @see #getSpecialization()
 	 * @generated
@@ -526,37 +537,15 @@ public interface Study_programmePackage extends EPackage {
 	EClass getSemester();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link tdt4250.study_programme.Semester#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link tdt4250.study_programme.Semester#getYear <em>Year</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Name</em>'.
-	 * @see tdt4250.study_programme.Semester#getName()
+	 * @return the meta object for the attribute '<em>Year</em>'.
+	 * @see tdt4250.study_programme.Semester#getYear()
 	 * @see #getSemester()
 	 * @generated
 	 */
-	EAttribute getSemester_Name();
-
-	/**
-	 * Returns the meta object for the reference list '{@link tdt4250.study_programme.Semester#getCourses <em>Courses</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Courses</em>'.
-	 * @see tdt4250.study_programme.Semester#getCourses()
-	 * @see #getSemester()
-	 * @generated
-	 */
-	EReference getSemester_Courses();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link tdt4250.study_programme.Semester#getSpecializations <em>Specializations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Specializations</em>'.
-	 * @see tdt4250.study_programme.Semester#getSpecializations()
-	 * @see #getSemester()
-	 * @generated
-	 */
-	EReference getSemester_Specializations();
+	EAttribute getSemester_Year();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link tdt4250.study_programme.Semester#getGroupedCourses <em>Grouped Courses</em>}'.
@@ -568,6 +557,28 @@ public interface Study_programmePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSemester_GroupedCourses();
+
+	/**
+	 * Returns the meta object for the attribute '{@link tdt4250.study_programme.Semester#getSeason <em>Season</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Season</em>'.
+	 * @see tdt4250.study_programme.Semester#getSeason()
+	 * @see #getSemester()
+	 * @generated
+	 */
+	EAttribute getSemester_Season();
+
+	/**
+	 * Returns the meta object for the attribute '{@link tdt4250.study_programme.Semester#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see tdt4250.study_programme.Semester#getName()
+	 * @see #getSemester()
+	 * @generated
+	 */
+	EAttribute getSemester_Name();
 
 	/**
 	 * Returns the meta object for class '{@link tdt4250.study_programme.Course <em>Course</em>}'.
@@ -624,15 +635,15 @@ public interface Study_programmePackage extends EPackage {
 	EAttribute getCourse_ExamType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link tdt4250.study_programme.Course#getCourseID <em>Course ID</em>}'.
+	 * Returns the meta object for the attribute list '{@link tdt4250.study_programme.Course#getFullCourseName <em>Full Course Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Course ID</em>'.
-	 * @see tdt4250.study_programme.Course#getCourseID()
+	 * @return the meta object for the attribute list '<em>Full Course Name</em>'.
+	 * @see tdt4250.study_programme.Course#getFullCourseName()
 	 * @see #getCourse()
 	 * @generated
 	 */
-	EAttribute getCourse_CourseID();
+	EAttribute getCourse_FullCourseName();
 
 	/**
 	 * Returns the meta object for class '{@link tdt4250.study_programme.GroupedCourses <em>Grouped Courses</em>}'.
@@ -656,17 +667,6 @@ public interface Study_programmePackage extends EPackage {
 	EReference getGroupedCourses_Courses();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link tdt4250.study_programme.GroupedCourses#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Name</em>'.
-	 * @see tdt4250.study_programme.GroupedCourses#getName()
-	 * @see #getGroupedCourses()
-	 * @generated
-	 */
-	EAttribute getGroupedCourses_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link tdt4250.study_programme.GroupedCourses#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -686,6 +686,26 @@ public interface Study_programmePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getcourseType();
+
+	/**
+	 * Returns the meta object for enum '{@link tdt4250.study_programme.examType <em>exam Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>exam Type</em>'.
+	 * @see tdt4250.study_programme.examType
+	 * @generated
+	 */
+	EEnum getexamType();
+
+	/**
+	 * Returns the meta object for enum '{@link tdt4250.study_programme.Season <em>Season</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Season</em>'.
+	 * @see tdt4250.study_programme.Season
+	 * @generated
+	 */
+	EEnum getSeason();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -711,14 +731,14 @@ public interface Study_programmePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link tdt4250.study_programme.impl.NTNUImpl <em>NTNU</em>}' class.
+		 * The meta object literal for the '{@link tdt4250.study_programme.impl.UniversityImpl <em>University</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tdt4250.study_programme.impl.NTNUImpl
-		 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getNTNU()
+		 * @see tdt4250.study_programme.impl.UniversityImpl
+		 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getUniversity()
 		 * @generated
 		 */
-		EClass NTNU = eINSTANCE.getNTNU();
+		EClass UNIVERSITY = eINSTANCE.getUniversity();
 
 		/**
 		 * The meta object literal for the '<em><b>Programmes</b></em>' containment reference list feature.
@@ -726,7 +746,7 @@ public interface Study_programmePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NTNU__PROGRAMMES = eINSTANCE.getNTNU_Programmes();
+		EReference UNIVERSITY__PROGRAMMES = eINSTANCE.getUniversity_Programmes();
 
 		/**
 		 * The meta object literal for the '<em><b>Courses</b></em>' containment reference list feature.
@@ -734,7 +754,7 @@ public interface Study_programmePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NTNU__COURSES = eINSTANCE.getNTNU_Courses();
+		EReference UNIVERSITY__COURSES = eINSTANCE.getUniversity_Courses();
 
 		/**
 		 * The meta object literal for the '{@link tdt4250.study_programme.impl.StudyProgrammeImpl <em>Study Programme</em>}' class.
@@ -781,7 +801,7 @@ public interface Study_programmePackage extends EPackage {
 		EClass SPECIALIZATION = eINSTANCE.getSpecialization();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -807,28 +827,12 @@ public interface Study_programmePackage extends EPackage {
 		EClass SEMESTER = eINSTANCE.getSemester();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Year</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEMESTER__NAME = eINSTANCE.getSemester_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Courses</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SEMESTER__COURSES = eINSTANCE.getSemester_Courses();
-
-		/**
-		 * The meta object literal for the '<em><b>Specializations</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SEMESTER__SPECIALIZATIONS = eINSTANCE.getSemester_Specializations();
+		EAttribute SEMESTER__YEAR = eINSTANCE.getSemester_Year();
 
 		/**
 		 * The meta object literal for the '<em><b>Grouped Courses</b></em>' containment reference list feature.
@@ -837,6 +841,22 @@ public interface Study_programmePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SEMESTER__GROUPED_COURSES = eINSTANCE.getSemester_GroupedCourses();
+
+		/**
+		 * The meta object literal for the '<em><b>Season</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMESTER__SEASON = eINSTANCE.getSemester_Season();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMESTER__NAME = eINSTANCE.getSemester_Name();
 
 		/**
 		 * The meta object literal for the '{@link tdt4250.study_programme.impl.CourseImpl <em>Course</em>}' class.
@@ -881,12 +901,12 @@ public interface Study_programmePackage extends EPackage {
 		EAttribute COURSE__EXAM_TYPE = eINSTANCE.getCourse_ExamType();
 
 		/**
-		 * The meta object literal for the '<em><b>Course ID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Full Course Name</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COURSE__COURSE_ID = eINSTANCE.getCourse_CourseID();
+		EAttribute COURSE__FULL_COURSE_NAME = eINSTANCE.getCourse_FullCourseName();
 
 		/**
 		 * The meta object literal for the '{@link tdt4250.study_programme.impl.GroupedCoursesImpl <em>Grouped Courses</em>}' class.
@@ -907,14 +927,6 @@ public interface Study_programmePackage extends EPackage {
 		EReference GROUPED_COURSES__COURSES = eINSTANCE.getGroupedCourses_Courses();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GROUPED_COURSES__NAME = eINSTANCE.getGroupedCourses_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -931,6 +943,26 @@ public interface Study_programmePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum COURSE_TYPE = eINSTANCE.getcourseType();
+
+		/**
+		 * The meta object literal for the '{@link tdt4250.study_programme.examType <em>exam Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see tdt4250.study_programme.examType
+		 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getexamType()
+		 * @generated
+		 */
+		EEnum EXAM_TYPE = eINSTANCE.getexamType();
+
+		/**
+		 * The meta object literal for the '{@link tdt4250.study_programme.Season <em>Season</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see tdt4250.study_programme.Season
+		 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getSeason()
+		 * @generated
+		 */
+		EEnum SEASON = eINSTANCE.getSeason();
 
 	}
 

@@ -37,10 +37,11 @@
       <semesters
           year="2">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.3"/>
+      </semesters>
+      <semesters>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
-            type="Elective"/>
+            courses="//@courses.9"/>
       </semesters>
     </specializations>
   </programmes>
