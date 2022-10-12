@@ -40,7 +40,7 @@ public interface Study_programmePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "platform:/plugin/tdt4250.study_programme.model/model/study_programme.ecore";
+	String eNS_URI = "platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore";
 
 	/**
 	 * The package namespace name.

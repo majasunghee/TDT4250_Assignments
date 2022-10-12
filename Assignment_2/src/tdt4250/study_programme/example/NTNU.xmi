@@ -3,8 +3,8 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:study_programme="platform:/plugin/tdt4250.study_programme.model/model/study_programme.ecore"
-    xsi:schemaLocation="platform:/plugin/tdt4250.study_programme.model/model/study_programme.ecore ../../../../model/study_programme.ecore">
+    xmlns:study_programme="platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore ../../../../model/study_programme.ecore">
   <programmes>
     <name>Informatikk, 2årig Master</name>
     <specializations>
