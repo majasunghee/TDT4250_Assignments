@@ -1,0 +1,14 @@
+[comment encoding = UTF-8 /]
+[module generateHTML('platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore')]
+
+
+[template public generateUniversity(uni : University)]
+[comment @main/]
+[file (uni.name + '.html', false, 'UTF-8')]
+
+<html>
+	<h1>[uni.name/] NTNU </h1>
+</html>
+
+[/file]
+[/template]

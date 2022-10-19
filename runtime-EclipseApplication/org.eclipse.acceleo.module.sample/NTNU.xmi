@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<study_programme:University
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:study_programme="platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore">
+  <programmes>
+    <name>Informatikk-Master</name>
+    <specializations>
+      <name>Databaser og Sok</name>
+      <semesters
+          year="1">
+        <groupedCourses
+            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses
+            courses="//@courses.4 //@courses.3 //@courses.2"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="1"
+          season="Vår">
+        <groupedCourses
+            courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+        <groupedCourses
+            courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="2">
+        <groupedCourses
+            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses
+            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="2">
+        <groupedCourses
+            courses="//@courses.3"/>
+      </semesters>
+      <semesters>
+        <groupedCourses
+            courses="//@courses.9"/>
+      </semesters>
+    </specializations>
+    <specializations>
+      <name>Interaksjonsdesign</name>
+      <semesters
+          year="1">
+        <groupedCourses
+            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses
+            courses="//@courses.4 //@courses.3 //@courses.2"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="1"
+          season="Vår">
+        <groupedCourses
+            courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+        <groupedCourses
+            courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="2">
+        <groupedCourses
+            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses
+            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="2">
+        <groupedCourses
+            courses="//@courses.3"/>
+      </semesters>
+      <semesters>
+        <groupedCourses
+            courses="//@courses.9"/>
+      </semesters>
+    </specializations>
+    <specializations>
+      <name>Programvaresystemer</name>
+      <semesters
+          year="1">
+        <groupedCourses
+            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses
+            courses="//@courses.4 //@courses.3 //@courses.2"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="1"
+          season="Vår">
+        <groupedCourses
+            courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+        <groupedCourses
+            courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="2">
+        <groupedCourses
+            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses
+            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="2">
+        <groupedCourses
+            courses="//@courses.3"/>
+      </semesters>
+      <semesters>
+        <groupedCourses
+            courses="//@courses.9"/>
+      </semesters>
+    </specializations>
+    <specializations>
+      <name>AI</name>
+      <semesters
+          year="1">
+        <groupedCourses
+            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses
+            courses="//@courses.4 //@courses.3 //@courses.2"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="1"
+          season="Vår">
+        <groupedCourses
+            courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+        <groupedCourses
+            courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="2">
+        <groupedCourses
+            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses
+            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            type="Elective"/>
+      </semesters>
+      <semesters
+          year="2">
+        <groupedCourses
+            courses="//@courses.3"/>
+      </semesters>
+      <semesters>
+        <groupedCourses
+            courses="//@courses.9"/>
+      </semesters>
+    </specializations>
+  </programmes>
+  <courses code="TDT4225"
+      credits="7.5">
+    <name>Very Large, Distributed Data Volumes</name>
+  </courses>
+  <courses code="HMS0009"
+      examType="Project">
+    <name>Health, Safety and Environment (HSE) course for 1st year students</name>
+  </courses>
+  <courses code="TDT4117"
+      credits="7.5">
+    <name>Information Retrieval</name>
+  </courses>
+  <courses code="TDT4225"
+      credits="7.5">
+    <name>Very Large, Distributed Data Volumes</name>
+  </courses>
+  <courses code="TDT4237"
+      credits="7.5">
+    <name>Software Security and Data Privacy</name>
+  </courses>
+  <courses code="IT2810"
+      credits="7.5"
+      examType="Project">
+    <name>Web Development</name>
+  </courses>
+  <courses code="TDT4136"
+      credits="7.5">
+    <name>Introduction to Artificial Intelligence</name>
+  </courses>
+  <courses code="TDT4200"
+      credits="7.5">
+    <name>Parallel Computing</name>
+  </courses>
+  <courses code="TDT4250"
+      credits="7.5"
+      examType="Project">
+    <name>Advanced Software Design</name>
+  </courses>
+  <courses code="TDT4259"
+      credits="7.5">
+    <name>Applied Data Science</name>
+  </courses>
+  <courses code="TDT4287"
+      credits="7.5">
+    <name>Algorithms for Bioinformatics</name>
+  </courses>
+  <courses code="TDT4150"
+      credits="7.5">
+    <name>Advanced Database Management Systems&#xD;
+</name>
+  </courses>
+  <courses code="TDT4305"
+      credits="7.5">
+    <name>Big Data Architecture</name>
+  </courses>
+  <courses code="IT3010"
+      credits="7.5"
+      examType="Project">
+    <name>Empirical research methodologies in IT and digitalization</name>
+  </courses>
+  <courses code="TDT4300"
+      credits="7.5">
+    <name>Data Warehousing and Data Mining</name>
+  </courses>
+  <courses code="IT3030"
+      credits="7.5">
+    <name>Deep Learning</name>
+  </courses>
+  <courses code="TDT4205"
+      credits="7.5">
+    <name>Compiler Construction</name>
+  </courses>
+  <courses code="TDT4215"
+      credits="7.5">
+    <name>Recommender Systems&#xD;
+Recommender Systems</name>
+  </courses>
+  <courses code="TPK4851"
+      credits="7.5"
+      examType="Project">
+    <name>Experts in Teamwork</name>
+  </courses>
+  <courses code="IT3915"
+      credits="15.0"
+      examType="Project">
+    <name>Master in Informatics, Preparatory Project</name>
+  </courses>
+  <courses code="IT3020"
+      credits="7.5"
+      examType="Project">
+    <name>Current Topics in Informatics</name>
+  </courses>
+  <courses code="IT3920"
+      credits="30.0"
+      examType="Project">
+    <name>Master Thesis for MSIT</name>
+  </courses>
+</study_programme:University>
