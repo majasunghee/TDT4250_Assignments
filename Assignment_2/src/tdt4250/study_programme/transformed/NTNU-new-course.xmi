@@ -23,6 +23,27 @@
         <groupedCourses courses="//@courses.9"/>
       </semesters>
     </specializations>
+    <specializations>
+      <name>Interaksjonsdesign</name>
+      <semesters year="1">
+        <groupedCourses courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses courses="//@courses.4 //@courses.3 //@courses.2" type="Elective"/>
+      </semesters>
+      <semesters year="1" season="V&#xe5;r">
+        <groupedCourses courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+        <groupedCourses courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9" type="Elective"/>
+      </semesters>
+      <semesters year="2">
+        <groupedCourses courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+        <groupedCourses courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1" type="Elective"/>
+      </semesters>
+      <semesters year="2">
+        <groupedCourses courses="//@courses.3"/>
+      </semesters>
+      <semesters>
+        <groupedCourses courses="//@courses.9"/>
+      </semesters>
+    </specializations>
   </programmes>
   <courses code="TDT4225" credits="7.5">
     <name>Very Large, Distributed Data Volumes</name>

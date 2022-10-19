@@ -39,8 +39,8 @@ public class Transformation {
       Map<String, Object> _extensionToFactoryMap = rs.getResourceFactoryRegistry().getExtensionToFactoryMap();
       XMIResourceFactoryImpl _xMIResourceFactoryImpl = new XMIResourceFactoryImpl();
       _extensionToFactoryMap.put("xmi", _xMIResourceFactoryImpl);
-      final String srcFolder = "/Users/phajs/Documents/repos/tdt4250-mj_ph/Assignment_2/model/";
-      final String dstFolder = "/Users/phajs/Documents/repos/tdt4250-mj_ph/Assignment_2/src/tdt4250/study_programme/transformed/";
+      final String srcFolder = "D:/ProgramDesignRepo/tdt4250-mj_ph/Assignment_2/model/";
+      final String dstFolder = "D:/ProgramDesignRepo/tdt4250-mj_ph/Assignment_2/src/tdt4250/study_programme/transformed/";
       final Resource resNTNU = rs.createResource(URI.createFileURI((srcFolder + "NTNU.xmi")));
       resNTNU.load(null);
       EObject _get = resNTNU.getContents().get(0);
@@ -67,7 +67,7 @@ public class Transformation {
       resource2.save(null);
       final Resource resource3 = rs.createResource(URI.createFileURI((dstFolder + "NTNU-show-select-group-course.xmi")));
       EList<EObject> _contents_2 = resource3.getContents();
-      Course[] _showAllElectiveCourses = Transformation.showAllElectiveCourses(uniNTNU, "Informatikk-Master", "Databaser og Sok");
+      Course[] _showAllElectiveCourses = Transformation.showAllElectiveCourses(uniNTNU, "Informatikk-Master", "Interaksjonsdesign");
       Iterables.<EObject>addAll(_contents_2, ((Iterable<? extends EObject>)Conversions.doWrapArray(_showAllElectiveCourses)));
       resource3.save(null);
     } catch (Throwable _e) {

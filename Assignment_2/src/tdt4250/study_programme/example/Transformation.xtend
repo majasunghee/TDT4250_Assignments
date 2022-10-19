@@ -20,8 +20,11 @@ class Transformation {
 		rs.getPackageRegistry().put(Study_programmePackage.eNS_URI, Study_programmePackage.eINSTANCE)
 		rs.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl())
 		
-		val srcFolder = "/Users/phajs/Documents/repos/tdt4250-mj_ph/Assignment_2/model/"
-		val dstFolder = "/Users/phajs/Documents/repos/tdt4250-mj_ph/Assignment_2/src/tdt4250/study_programme/transformed/"
+		//val srcFolder = "/Users/phajs/Documents/repos/tdt4250-mj_ph/Assignment_2/model/"
+		//val dstFolder = "/Users/phajs/Documents/repos/tdt4250-mj_ph/Assignment_2/src/tdt4250/study_programme/transformed/"
+		
+		val srcFolder = "D:/ProgramDesignRepo/tdt4250-mj_ph/Assignment_2/model/"
+		val dstFolder = "D:/ProgramDesignRepo/tdt4250-mj_ph/Assignment_2/src/tdt4250/study_programme/transformed/"
 													
 		val resNTNU = rs.createResource(URI.createFileURI(srcFolder + "NTNU.xmi"))
 		resNTNU.load(null)
@@ -49,7 +52,7 @@ class Transformation {
 		
 		//Transformation 3
 		val resource3 = rs.createResource(URI.createFileURI(dstFolder + "NTNU-show-select-group-course.xmi"))
-		resource3.contents += uniNTNU.showAllElectiveCourses("Informatikk-Master", "Databaser og Sok")
+		resource3.contents += uniNTNU.showAllElectiveCourses("Informatikk-Master", "Interaksjonsdesign")
 		resource3.save(null)
 		}
 		
