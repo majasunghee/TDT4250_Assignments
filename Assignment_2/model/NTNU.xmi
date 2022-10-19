@@ -14,7 +14,7 @@
         <groupedCourses
             courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            courses="//@courses.4 //@courses.3 //@courses.2"
             type="Elective"/>
       </semesters>
       <semesters

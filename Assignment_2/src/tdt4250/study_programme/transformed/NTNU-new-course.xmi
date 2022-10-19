@@ -6,7 +6,7 @@
       <name>Databaser og Sok</name>
       <semesters year="1">
         <groupedCourses courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
-        <groupedCourses courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1" type="Elective"/>
+        <groupedCourses courses="//@courses.4 //@courses.3 //@courses.2" type="Elective"/>
       </semesters>
       <semesters year="1" season="V&#xe5;r">
         <groupedCourses courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>

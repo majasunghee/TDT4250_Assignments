@@ -1,6 +1,7 @@
 package tdt4250.study_programme.example;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
@@ -8,6 +9,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
@@ -64,12 +66,9 @@ public class Transformation {
       _contents_1.add(_changeExamtypeInCourse);
       resource2.save(null);
       final Resource resource3 = rs.createResource(URI.createFileURI((dstFolder + "NTNU-show-select-group-course.xmi")));
-      final University filterModel = Transformation.showAllElectiveCourses(uniNTNU, "Informatikk-Master", "Databaser og Sok");
-      boolean _notEquals = (!Objects.equal(filterModel, null));
-      if (_notEquals) {
-        EList<EObject> _contents_2 = resource3.getContents();
-        _contents_2.add(filterModel);
-      }
+      EList<EObject> _contents_2 = resource3.getContents();
+      Course[] _showAllElectiveCourses = Transformation.showAllElectiveCourses(uniNTNU, "Informatikk-Master", "Databaser og Sok");
+      Iterables.<EObject>addAll(_contents_2, ((Iterable<? extends EObject>)Conversions.doWrapArray(_showAllElectiveCourses)));
       resource3.save(null);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -104,34 +103,50 @@ public class Transformation {
     return _xblockexpression;
   }
 
-  public static University showAllElectiveCourses(final University uni, final String programme, final String spec) {
-    University _xblockexpression = null;
-    {
-      final Function1<StudyProgramme, Boolean> _function = new Function1<StudyProgramme, Boolean>() {
-        public Boolean apply(final StudyProgramme it) {
-          return Boolean.valueOf(it.getName().contains(programme));
-        }
-      };
-      final Function1<Specialization, Boolean> _function_1 = new Function1<Specialization, Boolean>() {
-        public Boolean apply(final Specialization it) {
-          return Boolean.valueOf(it.getName().contains(spec));
-        }
-      };
-      final Function1<Semester, EList<GroupedCourses>> _function_2 = new Function1<Semester, EList<GroupedCourses>>() {
-        public EList<GroupedCourses> apply(final Semester it) {
-          return it.getGroupedCourses();
-        }
-      };
-      final Function1<GroupedCourses, Boolean> _function_3 = new Function1<GroupedCourses, Boolean>() {
-        public Boolean apply(final GroupedCourses it) {
-          String _string = it.getType().toString();
-          return Boolean.valueOf(Objects.equal(_string, "Elective"));
-        }
-      };
-      IterableExtensions.<GroupedCourses>toList(IterableExtensions.<GroupedCourses>filter(IterableExtensions.<Semester, GroupedCourses>flatMap(IterableExtensions.<Specialization>head(IterableExtensions.<Specialization>filter(IterableExtensions.<StudyProgramme>head(IterableExtensions.<StudyProgramme>filter(uni.getProgrammes(), _function)).getSpecializations(), _function_1)).getSemesters(), _function_2), _function_3));
-      InputOutput.<String>println("run3");
-      _xblockexpression = uni;
+  public static Course[] showAllElectiveCourses(final University uni, final String programme, final String spec) {
+    Course[] _xtrycatchfinallyexpression = null;
+    try {
+      Course[] _xblockexpression = null;
+      {
+        final Function1<StudyProgramme, Boolean> _function = new Function1<StudyProgramme, Boolean>() {
+          public Boolean apply(final StudyProgramme it) {
+            return Boolean.valueOf(it.getName().contains(programme));
+          }
+        };
+        final Function1<Specialization, Boolean> _function_1 = new Function1<Specialization, Boolean>() {
+          public Boolean apply(final Specialization it) {
+            return Boolean.valueOf(it.getName().contains(spec));
+          }
+        };
+        final Function1<Semester, EList<GroupedCourses>> _function_2 = new Function1<Semester, EList<GroupedCourses>>() {
+          public EList<GroupedCourses> apply(final Semester it) {
+            return it.getGroupedCourses();
+          }
+        };
+        final Function1<GroupedCourses, Boolean> _function_3 = new Function1<GroupedCourses, Boolean>() {
+          public Boolean apply(final GroupedCourses it) {
+            String _string = it.getType().toString();
+            return Boolean.valueOf(Objects.equal(_string, "Elective"));
+          }
+        };
+        final Function1<GroupedCourses, EList<Course>> _function_4 = new Function1<GroupedCourses, EList<Course>>() {
+          public EList<Course> apply(final GroupedCourses it) {
+            return it.getCourses();
+          }
+        };
+        Iterable<Course> _flatMap = IterableExtensions.<GroupedCourses, Course>flatMap(IterableExtensions.<GroupedCourses>toList(IterableExtensions.<GroupedCourses>filter(IterableExtensions.<Semester, GroupedCourses>flatMap(IterableExtensions.<Specialization>head(IterableExtensions.<Specialization>filter(IterableExtensions.<StudyProgramme>head(IterableExtensions.<StudyProgramme>filter(uni.getProgrammes(), _function)).getSpecializations(), _function_1)).getSemesters(), _function_2), _function_3)), _function_4);
+        final Course[] list = ((Course[]) ((Course[])Conversions.unwrapArray(_flatMap, Course.class)));
+        InputOutput.<String>println("run3");
+        _xblockexpression = list;
+      }
+      _xtrycatchfinallyexpression = _xblockexpression;
+    } catch (final Throwable _t) {
+      if (_t instanceof IllegalArgumentException) {
+        _xtrycatchfinallyexpression = null;
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
     }
-    return _xblockexpression;
+    return _xtrycatchfinallyexpression;
   }
 }

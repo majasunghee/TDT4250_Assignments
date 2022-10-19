@@ -49,12 +49,7 @@ class Transformation {
 		
 		//Transformation 3
 		val resource3 = rs.createResource(URI.createFileURI(dstFolder + "NTNU-show-select-group-course.xmi"))
-		val filterModel = uniNTNU.showAllElectiveCourses("Informatikk-Master", "Databaser og Sok")
-		
-		if(filterModel!= null){
-		resource3.contents += filterModel
-		
-		}
+		resource3.contents += uniNTNU.showAllElectiveCourses("Informatikk-Master", "Databaser og Sok")
 		resource3.save(null)
 		}
 		
@@ -72,16 +67,24 @@ class Transformation {
 		}		
 		
 		def static showAllElectiveCourses(University uni, String programme, String spec){
-			uni.programmes.filter[
+			try{
+			val list = uni.programmes.filter[
 				name.contains(programme)
 			].head.specializations.filter[
 				name.contains(spec)
 			].head.semesters.flatMap[
 				groupedCourses
-			].filter[type.toString=="Elective"].toList //as GroupedCourses[]
+			].filter[type.toString=="Elective"].toList.flatMap[
+				courses
+			] as Course[]
+
 			println("run3")
 			
-			uni
+			list
+			}catch(IllegalArgumentException e){
+				
+			}
+			
 		}
 		
 		}
