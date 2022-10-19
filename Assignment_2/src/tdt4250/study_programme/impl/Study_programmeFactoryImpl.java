@@ -77,9 +77,9 @@ public class Study_programmeFactoryImpl extends EFactoryImpl implements Study_pr
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
 			case Study_programmePackage.COURSE_TYPE:
-				return createcourseTypeFromString(eDataType, initialValue);
+				return createCourseTypeFromString(eDataType, initialValue);
 			case Study_programmePackage.EXAM_TYPE:
-				return createexamTypeFromString(eDataType, initialValue);
+				return createExamTypeFromString(eDataType, initialValue);
 			case Study_programmePackage.SEASON:
 				return createSeasonFromString(eDataType, initialValue);
 			default:
@@ -96,9 +96,9 @@ public class Study_programmeFactoryImpl extends EFactoryImpl implements Study_pr
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
 			case Study_programmePackage.COURSE_TYPE:
-				return convertcourseTypeToString(eDataType, instanceValue);
+				return convertCourseTypeToString(eDataType, instanceValue);
 			case Study_programmePackage.EXAM_TYPE:
-				return convertexamTypeToString(eDataType, instanceValue);
+				return convertExamTypeToString(eDataType, instanceValue);
 			case Study_programmePackage.SEASON:
 				return convertSeasonToString(eDataType, instanceValue);
 			default:
@@ -171,8 +171,8 @@ public class Study_programmeFactoryImpl extends EFactoryImpl implements Study_pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public courseType createcourseTypeFromString(EDataType eDataType, String initialValue) {
-		courseType result = courseType.get(initialValue);
+	public CourseType createCourseTypeFromString(EDataType eDataType, String initialValue) {
+		CourseType result = CourseType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -182,7 +182,7 @@ public class Study_programmeFactoryImpl extends EFactoryImpl implements Study_pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertcourseTypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertCourseTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -191,8 +191,8 @@ public class Study_programmeFactoryImpl extends EFactoryImpl implements Study_pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public examType createexamTypeFromString(EDataType eDataType, String initialValue) {
-		examType result = examType.get(initialValue);
+	public ExamType createExamTypeFromString(EDataType eDataType, String initialValue) {
+		ExamType result = ExamType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -202,7 +202,7 @@ public class Study_programmeFactoryImpl extends EFactoryImpl implements Study_pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertexamTypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertExamTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

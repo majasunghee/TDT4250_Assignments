@@ -39,27 +39,27 @@ public interface GroupedCourses extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link tdt4250.study_programme.courseType}.
+	 * The literals are from the enumeration {@link tdt4250.study_programme.CourseType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see tdt4250.study_programme.courseType
-	 * @see #setType(courseType)
+	 * @see tdt4250.study_programme.CourseType
+	 * @see #setType(CourseType)
 	 * @see tdt4250.study_programme.Study_programmePackage#getGroupedCourses_Type()
 	 * @model required="true"
 	 * @generated
 	 */
-	courseType getType();
+	CourseType getType();
 
 	/**
 	 * Sets the value of the '{@link tdt4250.study_programme.GroupedCourses#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see tdt4250.study_programme.courseType
+	 * @see tdt4250.study_programme.CourseType
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(courseType value);
+	void setType(CourseType value);
 
 } // GroupedCourses

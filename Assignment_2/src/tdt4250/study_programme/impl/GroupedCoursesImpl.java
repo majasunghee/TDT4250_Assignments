@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import tdt4250.study_programme.Course;
+import tdt4250.study_programme.CourseType;
 import tdt4250.study_programme.GroupedCourses;
 import tdt4250.study_programme.Study_programmePackage;
-import tdt4250.study_programme.courseType;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,7 +53,7 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final courseType TYPE_EDEFAULT = courseType.MANDATORY;
+	protected static final CourseType TYPE_EDEFAULT = CourseType.MANDATORY;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -63,7 +63,7 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected courseType type = TYPE_EDEFAULT;
+	protected CourseType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,7 +101,7 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public courseType getType() {
+	public CourseType getType() {
 		return type;
 	}
 
@@ -110,8 +110,8 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(courseType newType) {
-		courseType oldType = type;
+	public void setType(CourseType newType) {
+		CourseType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Study_programmePackage.GROUPED_COURSES__TYPE, oldType, type));
@@ -147,7 +147,7 @@ public class GroupedCoursesImpl extends MinimalEObjectImpl.Container implements 
 				getCourses().addAll((Collection<? extends Course>)newValue);
 				return;
 			case Study_programmePackage.GROUPED_COURSES__TYPE:
-				setType((courseType)newValue);
+				setType((CourseType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

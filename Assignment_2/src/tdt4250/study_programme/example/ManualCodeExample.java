@@ -38,6 +38,9 @@ public class ManualCodeExample {
 		groupedCourses.getCourses().add(course);
 		groupedCourses.getCourses().add(course2);
 		
+		groupedCourses.getCourses().get(0);
+	
+		
 		//System.out.println(groupedCourses.toString());
 		for (Course el : groupedCourses.getCourses()) {
 			System.out.println(el.toString());

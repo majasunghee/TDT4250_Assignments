@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<study_programme:Course xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:study_programme="platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore" code="TDT4250" credits="7.5" examType="Project">
+  <name>Advanced Software Design</name>
+</study_programme:Course>

@@ -98,9 +98,9 @@ public class Study_programmeValidator extends EObjectValidator {
 			case Study_programmePackage.GROUPED_COURSES:
 				return validateGroupedCourses((GroupedCourses)value, diagnostics, context);
 			case Study_programmePackage.COURSE_TYPE:
-				return validatecourseType((courseType)value, diagnostics, context);
+				return validateCourseType((CourseType)value, diagnostics, context);
 			case Study_programmePackage.EXAM_TYPE:
-				return validateexamType((examType)value, diagnostics, context);
+				return validateExamType((ExamType)value, diagnostics, context);
 			case Study_programmePackage.SEASON:
 				return validateSeason((Season)value, diagnostics, context);
 			default:
@@ -249,7 +249,7 @@ public class Study_programmeValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatecourseType(courseType courseType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCourseType(CourseType courseType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -258,7 +258,7 @@ public class Study_programmeValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateexamType(examType examType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateExamType(ExamType examType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

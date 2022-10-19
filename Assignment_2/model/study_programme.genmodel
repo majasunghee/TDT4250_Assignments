@@ -9,14 +9,14 @@
   <foreignModel>study_programme.ecore</foreignModel>
   <genPackages prefix="Study_programme" basePackage="tdt4250" disposableProviderFactory="true"
       ecorePackage="study_programme.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="study_programme.ecore#//courseType">
-      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//courseType/Mandatory"/>
-      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//courseType/Elective"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="study_programme.ecore#//CourseType">
+      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//CourseType/Mandatory"/>
+      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//CourseType/Elective"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="study_programme.ecore#//examType">
-      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//examType/Written"/>
-      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//examType/Project"/>
-      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//examType/Oral"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="study_programme.ecore#//ExamType">
+      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//ExamType/Written"/>
+      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//ExamType/Project"/>
+      <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//ExamType/Oral"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="study_programme.ecore#//Season">
       <genEnumLiterals ecoreEnumLiteral="study_programme.ecore#//Season/Høst"/>

@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import tdt4250.study_programme.Course;
+import tdt4250.study_programme.CourseType;
+import tdt4250.study_programme.ExamType;
 import tdt4250.study_programme.GroupedCourses;
 import tdt4250.study_programme.Season;
 import tdt4250.study_programme.Semester;
@@ -20,9 +22,6 @@ import tdt4250.study_programme.StudyProgramme;
 import tdt4250.study_programme.Study_programmeFactory;
 import tdt4250.study_programme.Study_programmePackage;
 import tdt4250.study_programme.University;
-import tdt4250.study_programme.courseType;
-import tdt4250.study_programme.examType;
-
 import tdt4250.study_programme.util.Study_programmeValidator;
 
 /**
@@ -386,7 +385,7 @@ public class Study_programmePackageImpl extends EPackageImpl implements Study_pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getcourseType() {
+	public EEnum getCourseType() {
 		return courseTypeEEnum;
 	}
 
@@ -395,7 +394,7 @@ public class Study_programmePackageImpl extends EPackageImpl implements Study_pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getexamType() {
+	public EEnum getExamType() {
 		return examTypeEEnum;
 	}
 
@@ -525,22 +524,22 @@ public class Study_programmePackageImpl extends EPackageImpl implements Study_pr
 		initEAttribute(getCourse_Name(), ecorePackage.getEString(), "name", null, 1, 2, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Code(), ecorePackage.getEString(), "code", null, 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Credits(), ecorePackage.getEFloat(), "credits", null, 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCourse_ExamType(), this.getexamType(), "examType", null, 0, -1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_ExamType(), this.getExamType(), "examType", null, 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_FullCourseName(), ecorePackage.getEString(), "fullCourseName", null, 0, 2, Course.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupedCoursesEClass, GroupedCourses.class, "GroupedCourses", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGroupedCourses_Courses(), this.getCourse(), null, "courses", null, 1, -1, GroupedCourses.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGroupedCourses_Type(), this.getcourseType(), "type", null, 1, 1, GroupedCourses.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGroupedCourses_Type(), this.getCourseType(), "type", null, 1, 1, GroupedCourses.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(courseTypeEEnum, courseType.class, "courseType");
-		addEEnumLiteral(courseTypeEEnum, courseType.MANDATORY);
-		addEEnumLiteral(courseTypeEEnum, courseType.ELECTIVE);
+		initEEnum(courseTypeEEnum, CourseType.class, "CourseType");
+		addEEnumLiteral(courseTypeEEnum, CourseType.MANDATORY);
+		addEEnumLiteral(courseTypeEEnum, CourseType.ELECTIVE);
 
-		initEEnum(examTypeEEnum, examType.class, "examType");
-		addEEnumLiteral(examTypeEEnum, examType.WRITTEN);
-		addEEnumLiteral(examTypeEEnum, examType.PROJECT);
-		addEEnumLiteral(examTypeEEnum, examType.ORAL);
+		initEEnum(examTypeEEnum, ExamType.class, "ExamType");
+		addEEnumLiteral(examTypeEEnum, ExamType.WRITTEN);
+		addEEnumLiteral(examTypeEEnum, ExamType.PROJECT);
+		addEEnumLiteral(examTypeEEnum, ExamType.ORAL);
 
 		initEEnum(seasonEEnum, Season.class, "Season");
 		addEEnumLiteral(seasonEEnum, Season.HØST);

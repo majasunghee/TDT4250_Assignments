@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>exam Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Exam Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see tdt4250.study_programme.Study_programmePackage#getexamType()
+ * @see tdt4250.study_programme.Study_programmePackage#getExamType()
  * @model
  * @generated
  */
-public enum examType implements Enumerator {
+public enum ExamType implements Enumerator {
 	/**
 	 * The '<em><b>Written</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -82,37 +82,37 @@ public enum examType implements Enumerator {
 	public static final int ORAL_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>exam Type</b></em>' enumerators.
+	 * An array of all the '<em><b>Exam Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final examType[] VALUES_ARRAY =
-		new examType[] {
+	private static final ExamType[] VALUES_ARRAY =
+		new ExamType[] {
 			WRITTEN,
 			PROJECT,
 			ORAL,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>exam Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Exam Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<examType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<ExamType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>exam Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Exam Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static examType get(String literal) {
+	public static ExamType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			examType result = VALUES_ARRAY[i];
+			ExamType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -121,16 +121,16 @@ public enum examType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>exam Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Exam Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static examType getByName(String name) {
+	public static ExamType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			examType result = VALUES_ARRAY[i];
+			ExamType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -139,14 +139,14 @@ public enum examType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>exam Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Exam Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static examType get(int value) {
+	public static ExamType get(int value) {
 		switch (value) {
 			case WRITTEN_VALUE: return WRITTEN;
 			case PROJECT_VALUE: return PROJECT;
@@ -182,7 +182,7 @@ public enum examType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private examType(int value, String name, String literal) {
+	private ExamType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -226,4 +226,4 @@ public enum examType implements Enumerator {
 		return literal;
 	}
 	
-} //examType
+} //ExamType

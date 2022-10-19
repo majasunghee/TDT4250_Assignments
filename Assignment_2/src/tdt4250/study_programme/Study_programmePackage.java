@@ -307,7 +307,7 @@ public interface Study_programmePackage extends EPackage {
 	int COURSE__CREDITS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Exam Type</b></em>' attribute list.
+	 * The feature id for the '<em><b>Exam Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -389,21 +389,21 @@ public interface Study_programmePackage extends EPackage {
 	int GROUPED_COURSES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link tdt4250.study_programme.courseType <em>course Type</em>}' enum.
+	 * The meta object id for the '{@link tdt4250.study_programme.CourseType <em>Course Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tdt4250.study_programme.courseType
-	 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getcourseType()
+	 * @see tdt4250.study_programme.CourseType
+	 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getCourseType()
 	 * @generated
 	 */
 	int COURSE_TYPE = 6;
 
 	/**
-	 * The meta object id for the '{@link tdt4250.study_programme.examType <em>exam Type</em>}' enum.
+	 * The meta object id for the '{@link tdt4250.study_programme.ExamType <em>Exam Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tdt4250.study_programme.examType
-	 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getexamType()
+	 * @see tdt4250.study_programme.ExamType
+	 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getExamType()
 	 * @generated
 	 */
 	int EXAM_TYPE = 7;
@@ -624,10 +624,10 @@ public interface Study_programmePackage extends EPackage {
 	EAttribute getCourse_Credits();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link tdt4250.study_programme.Course#getExamType <em>Exam Type</em>}'.
+	 * Returns the meta object for the attribute '{@link tdt4250.study_programme.Course#getExamType <em>Exam Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Exam Type</em>'.
+	 * @return the meta object for the attribute '<em>Exam Type</em>'.
 	 * @see tdt4250.study_programme.Course#getExamType()
 	 * @see #getCourse()
 	 * @generated
@@ -678,24 +678,24 @@ public interface Study_programmePackage extends EPackage {
 	EAttribute getGroupedCourses_Type();
 
 	/**
-	 * Returns the meta object for enum '{@link tdt4250.study_programme.courseType <em>course Type</em>}'.
+	 * Returns the meta object for enum '{@link tdt4250.study_programme.CourseType <em>Course Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>course Type</em>'.
-	 * @see tdt4250.study_programme.courseType
+	 * @return the meta object for enum '<em>Course Type</em>'.
+	 * @see tdt4250.study_programme.CourseType
 	 * @generated
 	 */
-	EEnum getcourseType();
+	EEnum getCourseType();
 
 	/**
-	 * Returns the meta object for enum '{@link tdt4250.study_programme.examType <em>exam Type</em>}'.
+	 * Returns the meta object for enum '{@link tdt4250.study_programme.ExamType <em>Exam Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>exam Type</em>'.
-	 * @see tdt4250.study_programme.examType
+	 * @return the meta object for enum '<em>Exam Type</em>'.
+	 * @see tdt4250.study_programme.ExamType
 	 * @generated
 	 */
-	EEnum getexamType();
+	EEnum getExamType();
 
 	/**
 	 * Returns the meta object for enum '{@link tdt4250.study_programme.Season <em>Season</em>}'.
@@ -893,7 +893,7 @@ public interface Study_programmePackage extends EPackage {
 		EAttribute COURSE__CREDITS = eINSTANCE.getCourse_Credits();
 
 		/**
-		 * The meta object literal for the '<em><b>Exam Type</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Exam Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -935,24 +935,24 @@ public interface Study_programmePackage extends EPackage {
 		EAttribute GROUPED_COURSES__TYPE = eINSTANCE.getGroupedCourses_Type();
 
 		/**
-		 * The meta object literal for the '{@link tdt4250.study_programme.courseType <em>course Type</em>}' enum.
+		 * The meta object literal for the '{@link tdt4250.study_programme.CourseType <em>Course Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tdt4250.study_programme.courseType
-		 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getcourseType()
+		 * @see tdt4250.study_programme.CourseType
+		 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getCourseType()
 		 * @generated
 		 */
-		EEnum COURSE_TYPE = eINSTANCE.getcourseType();
+		EEnum COURSE_TYPE = eINSTANCE.getCourseType();
 
 		/**
-		 * The meta object literal for the '{@link tdt4250.study_programme.examType <em>exam Type</em>}' enum.
+		 * The meta object literal for the '{@link tdt4250.study_programme.ExamType <em>Exam Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tdt4250.study_programme.examType
-		 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getexamType()
+		 * @see tdt4250.study_programme.ExamType
+		 * @see tdt4250.study_programme.impl.Study_programmePackageImpl#getExamType()
 		 * @generated
 		 */
-		EEnum EXAM_TYPE = eINSTANCE.getexamType();
+		EEnum EXAM_TYPE = eINSTANCE.getExamType();
 
 		/**
 		 * The meta object literal for the '{@link tdt4250.study_programme.Season <em>Season</em>}' enum.

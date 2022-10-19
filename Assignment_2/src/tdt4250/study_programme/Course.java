@@ -84,18 +84,29 @@ public interface Course extends EObject {
 	void setCredits(float value);
 
 	/**
-	 * Returns the value of the '<em><b>Exam Type</b></em>' attribute list.
-	 * The list contents are of type {@link tdt4250.study_programme.examType}.
-	 * The literals are from the enumeration {@link tdt4250.study_programme.examType}.
+	 * Returns the value of the '<em><b>Exam Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link tdt4250.study_programme.ExamType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exam Type</em>' attribute list.
-	 * @see tdt4250.study_programme.examType
+	 * @return the value of the '<em>Exam Type</em>' attribute.
+	 * @see tdt4250.study_programme.ExamType
+	 * @see #setExamType(ExamType)
 	 * @see tdt4250.study_programme.Study_programmePackage#getCourse_ExamType()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<examType> getExamType();
+	ExamType getExamType();
+
+	/**
+	 * Sets the value of the '{@link tdt4250.study_programme.Course#getExamType <em>Exam Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exam Type</em>' attribute.
+	 * @see tdt4250.study_programme.ExamType
+	 * @see #getExamType()
+	 * @generated
+	 */
+	void setExamType(ExamType value);
 
 	/**
 	 * Returns the value of the '<em><b>Full Course Name</b></em>' attribute list.

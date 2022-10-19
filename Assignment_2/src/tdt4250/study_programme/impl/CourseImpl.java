@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import tdt4250.study_programme.Course;
+import tdt4250.study_programme.ExamType;
 import tdt4250.study_programme.Study_programmePackage;
-import tdt4250.study_programme.examType;
 
 /**
  * <!-- begin-user-doc -->
@@ -88,14 +88,24 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	protected float credits = CREDITS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getExamType() <em>Exam Type</em>}' attribute list.
+	 * The default value of the '{@link #getExamType() <em>Exam Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExamType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<examType> examType;
+	protected static final ExamType EXAM_TYPE_EDEFAULT = ExamType.WRITTEN;
+
+	/**
+	 * The cached value of the '{@link #getExamType() <em>Exam Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExamType()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExamType examType = EXAM_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,11 +185,20 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<examType> getExamType() {
-		if (examType == null) {
-			examType = new EDataTypeUniqueEList<examType>(examType.class, this, Study_programmePackage.COURSE__EXAM_TYPE);
-		}
+	public ExamType getExamType() {
 		return examType;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExamType(ExamType newExamType) {
+		ExamType oldExamType = examType;
+		examType = newExamType == null ? EXAM_TYPE_EDEFAULT : newExamType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Study_programmePackage.COURSE__EXAM_TYPE, oldExamType, examType));
 	}
 
 	/**
@@ -242,8 +261,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				setCredits((Float)newValue);
 				return;
 			case Study_programmePackage.COURSE__EXAM_TYPE:
-				getExamType().clear();
-				getExamType().addAll((Collection<? extends examType>)newValue);
+				setExamType((ExamType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -267,7 +285,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				setCredits(CREDITS_EDEFAULT);
 				return;
 			case Study_programmePackage.COURSE__EXAM_TYPE:
-				getExamType().clear();
+				setExamType(EXAM_TYPE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -288,7 +306,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case Study_programmePackage.COURSE__CREDITS:
 				return credits != CREDITS_EDEFAULT;
 			case Study_programmePackage.COURSE__EXAM_TYPE:
-				return examType != null && !examType.isEmpty();
+				return examType != EXAM_TYPE_EDEFAULT;
 			case Study_programmePackage.COURSE__FULL_COURSE_NAME:
 				return !getFullCourseName().isEmpty();
 		}
