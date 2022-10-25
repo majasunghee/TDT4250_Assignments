@@ -4,26 +4,62 @@
 
 [template public generateUniversity(uni : University)]
 [comment @main/]
-[file (uni.programmes.name + '2' + '.html', false, 'UTF-8')]
+[file (uni.programmes.name + '.html', false, 'UTF-8')]
 
 <html>
-	<h1>[uni.programmes.name/] at NTNU </h1>
-	<p> Study Programme: [uni.programmes.name/]</p>
+<body style="padding: 2vw;">
+	<h1> NTNU </h1>
+	<p> <b> Study Programme: </b> [uni.programmes.name/]</p>
 	<p> Specializations: </p>
-	<select>
-		<option></option>
+	<select onchange="selectSpecialization(event)">
+		<option value=""></option>
 		[for (spec : Specialization | uni.programmes.specializations)]
 				<option value=[spec.name/]>[spec.name/]</option>
 		[/for]
 	</select>
+	
 
+	<div> 
+	[for (spec : Specialization | uni.programmes.specializations)]
+		<div id=[spec.name/] hidden>
+		<h2>[spec.name/]</h2>
+		[for (sem : Semester | spec.semesters)]
+				<h3 style="text-decoration:underline;"> [sem.name/] </h3>
+				[for (group : GroupedCourses | sem.groupedCourses)]
+					<div style="margin: 16px;">
+					<b>[group.type/] courses</b>
+					<ul>
+					[for (course : Course | group.courses)]
+						<li>[course.fullCourseName/]</li>
+					[/for]	
+					</ul>
+					</div>
+				[/for]	
+		[/for]		
+		<br/>
+		</div>
+	[/for]
+	</div>
 
-[comment]	<ul>[for (sem : Semester | uni.programmes.specializations.semesters)]
-			<li>[sem.name/] 
-				
-			</li>
-		[/for]
-	</ul>[/comment]
+</body>
+<script type="text/javascript">
+	function selectSpecialization(event) {
+	var selectedElement = event.target;
+    var value = selectedElement.value;   
+	if(value != "") {
+		var specializations = selectedElement.nextElementSibling.children;
+		for(var i = 0; i < specializations.length; i++) {
+			var specialization = specializations['['/]i];
+			if(specialization.id == value) {
+				specialization.removeAttribute("hidden");
+			}
+			else if(!specialization.hasAttribute("hidden")) {
+				specialization.setAttribute("hidden", null);
+			}
+		}
+	}
+	}
+</script>
 </html>
 
 [/file]
