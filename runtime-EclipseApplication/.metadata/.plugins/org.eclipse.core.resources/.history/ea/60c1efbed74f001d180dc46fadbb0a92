@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+[module generateHTML('platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore')]
+
+
+[template public generateUniversity(anUniversity : University)]
+[comment @main/]
+[file (anUniversity.name + '.html', false, 'UTF-8')]
+
+<html>
+	<h1>
+	HELLO WORLD
+	</h1>
+</html>
+
+[/file]
+[/template]

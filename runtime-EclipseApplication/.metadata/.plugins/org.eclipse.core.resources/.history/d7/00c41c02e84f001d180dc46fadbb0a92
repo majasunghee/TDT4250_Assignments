@@ -1,0 +1,34 @@
+[comment encoding = UTF-8 /]
+[module generateHTML('platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore')]
+
+
+[template public generateUniversity(uni : University)]
+[comment @main/]
+[file (uni.programmes.name + '2' + '.html', false, 'UTF-8')]
+var value = ""
+
+<html>
+	<h1>[uni.programmes.name/] at NTNU </h1>
+	<p> Study Programme: [uni.programmes.name/]</p>
+	<p> Specializations: </p>
+	<select>
+		<option></option>
+		[for (spec : Specialization | uni.programmes.specializations)]
+				<option value=[spec.name/]>[spec.name/]</option>
+				value = spec.name.toString()
+		[/for]
+	</select>
+<p>[value/] </p>
+
+
+
+[comment]	<ul>[for (sem : Semester | uni.programmes.specializations.semesters)]
+			<li>[sem.name/] 
+				
+			</li>
+		[/for]
+	</ul>[/comment]
+</html>
+
+[/file]
+[/template]

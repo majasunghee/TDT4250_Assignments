@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="Assignment 1/tdt4250/study_programme/model/src/|Assignment 1/tdt4250.study_programme.model/src/|Assignment_2/|Assignment 1/|Assignment 1/" kind="src" path=""/>
+	<classpathentry kind="src" path="Assignment 1/tdt4250.study_programme.model/src"/>
+	<classpathentry kind="src" path="Assignment_2"/>
+	<classpathentry excluding="tdt4250.study_programme.model/src/" kind="src" path="Assignment 1"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

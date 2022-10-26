@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated study_programme -->
+      <package
+            uri="platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore"
+            class="tdt4250.study_programme.Study_programmePackage"
+            genModel="model/study_programme.genmodel"/>
+   </extension>
+
+</plugin>

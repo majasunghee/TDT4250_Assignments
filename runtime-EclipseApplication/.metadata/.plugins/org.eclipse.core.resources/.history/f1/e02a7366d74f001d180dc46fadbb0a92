@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generateHTML('platform:/plugin/tdt4250.study_programme.model2/model/study_programme.ecore')]
+
+
+[template public generateUniversity(anUniversity : University)]
+[comment @main/]
+[file (anUniversity.name, false, 'UTF-8')]
+
+[/file]
+[/template]
