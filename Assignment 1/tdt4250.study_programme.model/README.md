@@ -62,6 +62,4 @@ This model is from the same instance as the NTNU model. It provides a better vie
 
 ![Assignment_1_semester_model](/uploads/f096a651f05f230b7d643784fa3852e5/Assignment_1_semester_model.png)
 
-## Authors
-Maja Sung Hee Jenssen and Phajsi Halvorsen
 
