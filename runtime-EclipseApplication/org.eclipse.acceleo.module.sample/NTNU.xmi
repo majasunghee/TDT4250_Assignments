@@ -10,32 +10,33 @@
       <semesters
           year="1">
         <groupedCourses
-            courses="//@courses.22 //@courses.1"/>
+            courses="//@courses.1 //@courses.2"/>
         <groupedCourses
-            courses="//@courses.2 //@courses.6 //@courses.3"
+            courses="//@courses.3 //@courses.4 //@courses.5 //@courses.6 //@courses.7 //@courses.8 //@courses.9 //@courses.10"
             type="Elective"/>
       </semesters>
       <semesters
           year="1"
           season="Vår">
         <groupedCourses
-            courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+            courses="//@courses.13 //@courses.14"/>
         <groupedCourses
-            courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
+            courses="//@courses.11 //@courses.12 //@courses.15 //@courses.16 //@courses.17"
             type="Elective"/>
       </semesters>
       <semesters
           year="2">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.19"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            courses="//@courses.0 //@courses.20 //@courses.4 //@courses.5 //@courses.6 //@courses.7 //@courses.10"
             type="Elective"/>
       </semesters>
       <semesters
-          year="2">
+          year="2"
+          season="Vår">
         <groupedCourses
-            courses="//@courses.3"/>
+            courses="//@courses.21"/>
       </semesters>
     </specializations>
     <specializations>
@@ -43,9 +44,9 @@
       <semesters
           year="1">
         <groupedCourses
-            courses="//@courses.1 //@courses.8"/>
+            courses="//@courses.1 //@courses.22"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2"
+            courses="//@courses.2 //@courses.6 //@courses.8 //@courses.9"
             type="Elective"/>
       </semesters>
       <semesters
@@ -54,7 +55,7 @@
         <groupedCourses
             courses="//@courses.23"/>
         <groupedCourses
-            courses="//@courses.8 //@courses.24 //@courses.25"
+            courses="//@courses.24 //@courses.25 //@courses.26 //@courses.4"
             type="Elective"/>
       </semesters>
       <semesters
@@ -62,13 +63,14 @@
         <groupedCourses
             courses="//@courses.19"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            courses="//@courses.20 //@courses.8 //@courses.9"
             type="Elective"/>
       </semesters>
       <semesters
-          year="2">
+          year="2"
+          season="Vår">
         <groupedCourses
-            courses="//@courses.3"/>
+            courses="//@courses.21"/>
       </semesters>
     </specializations>
     <specializations>
@@ -76,18 +78,18 @@
       <semesters
           year="1">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.30 //@courses.1"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2"
+            courses="//@courses.8 //@courses.9 //@courses.22 //@courses.2 //@courses.6"
             type="Elective"/>
       </semesters>
       <semesters
           year="1"
           season="Vår">
         <groupedCourses
-            courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+            courses="//@courses.13"/>
         <groupedCourses
-            courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
+            courses="//@courses.31 //@courses.4 //@courses.33 //@courses.34 //@courses.35"
             type="Elective"/>
       </semesters>
       <semesters
@@ -95,23 +97,24 @@
         <groupedCourses
             courses="//@courses.19"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            courses="//@courses.20 //@courses.22 //@courses.8 //@courses.9 //@courses.2 //@courses.6"
             type="Elective"/>
       </semesters>
       <semesters
-          year="2">
+          year="2"
+          season="Vår">
         <groupedCourses
-            courses="//@courses.3"/>
+            courses="//@courses.21"/>
       </semesters>
     </specializations>
     <specializations>
-      <name>AI</name>
+      <name>Artificial Intelligence</name>
       <semesters
           year="1">
         <groupedCourses
             courses="//@courses.1 //@courses.27 //@courses.6"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2"
+            courses="//@courses.2 //@courses.0 //@courses.9"
             type="Elective"/>
       </semesters>
       <semesters
@@ -120,7 +123,7 @@
         <groupedCourses
             courses="//@courses.28 //@courses.29 //@courses.26"/>
         <groupedCourses
-            courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
+            courses="//@courses.17 //@courses.15 //@courses.36 //@courses.37"
             type="Elective"/>
       </semesters>
       <semesters
@@ -128,13 +131,14 @@
         <groupedCourses
             courses="//@courses.19"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
+            courses="//@courses.20 //@courses.2 //@courses.0 //@courses.9"
             type="Elective"/>
       </semesters>
       <semesters
-          year="2">
+          year="2"
+          season="Vår">
         <groupedCourses
-            courses="//@courses.3"/>
+            courses="//@courses.21"/>
       </semesters>
     </specializations>
   </programmes>
@@ -274,5 +278,37 @@ Recommender Systems</name>
       credits="7.5"
       examType="Project">
     <name>Bio-Inspired Artificial Intelligence</name>
+  </courses>
+  <courses code="TDT4175"
+      credits="7.5">
+    <name>Information Systems</name>
+  </courses>
+  <courses code="TDT4120"
+      credits="7.5">
+    <name>Algorithms and Data Structures</name>
+  </courses>
+  <courses code="TDT4237"
+      credits="7.5">
+    <name>Software Security and Data Privacy</name>
+  </courses>
+  <courses code="TDT4240"
+      credits="7.5">
+    <name>Software Architecture</name>
+  </courses>
+  <courses code="TDT4242"
+      credits="7.5">
+    <name>Advanced Software Engineering</name>
+  </courses>
+  <courses code="TDT4257"
+      credits="7.5">
+    <name>Digital Platforms and Service Innovation</name>
+  </courses>
+  <courses code="NEVR3004"
+      credits="7.5">
+    <name>Neural Networks</name>
+  </courses>
+  <courses code="TMA4268"
+      credits="7.5">
+    <name>Statistical Learning</name>
   </courses>
 </study_programme:University>

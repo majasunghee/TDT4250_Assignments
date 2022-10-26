@@ -13,7 +13,6 @@ import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
-import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
@@ -79,7 +78,6 @@ public class Transformation {
     University _xblockexpression = null;
     {
       uni.getCourses().add(course);
-      InputOutput.<String>println("run");
       _xblockexpression = uni;
     }
     return _xblockexpression;
@@ -97,7 +95,6 @@ public class Transformation {
       Course _head = IterableExtensions.<Course>head(IterableExtensions.<Course>filter(uni.getCourses(), _function));
       final Course course = ((Course) _head);
       course.setExamType(type);
-      InputOutput.<String>println("run2");
       _xblockexpression = course;
     }
     return _xblockexpression;
@@ -136,7 +133,6 @@ public class Transformation {
         };
         Iterable<Course> _flatMap = IterableExtensions.<GroupedCourses, Course>flatMap(IterableExtensions.<GroupedCourses>toList(IterableExtensions.<GroupedCourses>filter(IterableExtensions.<Semester, GroupedCourses>flatMap(IterableExtensions.<Specialization>head(IterableExtensions.<Specialization>filter(IterableExtensions.<StudyProgramme>head(IterableExtensions.<StudyProgramme>filter(uni.getProgrammes(), _function)).getSpecializations(), _function_1)).getSemesters(), _function_2), _function_3)), _function_4);
         final Course[] list = ((Course[]) ((Course[])Conversions.unwrapArray(_flatMap, Course.class)));
-        InputOutput.<String>println("run3");
         _xblockexpression = list;
       }
       _xtrycatchfinallyexpression = _xblockexpression;

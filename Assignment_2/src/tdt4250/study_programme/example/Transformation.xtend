@@ -58,14 +58,12 @@ class Transformation {
 		
 		def static addCourse(University uni, Course course){
 			uni.courses.add(course)
-			println("run")
 			uni
 		}
 		
 		def static changeExamtypeInCourse(University uni, String courseCode, ExamType type){
 			val course = uni.courses.filter[code == courseCode].head as Course
 			course.examType = type
-			println("run2")
 			course
 		}		
 		
@@ -81,7 +79,6 @@ class Transformation {
 				courses
 			] as Course[]
 
-			println("run3")
 			
 			list
 			}catch(IllegalArgumentException e){
