@@ -7,8 +7,12 @@
 [file (uni.programmes.name + '.html', false, 'UTF-8')]
 
 <html>
+<head>
+	<title> NTNU study programme </title>
+	<meta charset="utf-8"/>
+</head>
 <body style="padding: 2vw;">
-	<h1> NTNU </h1>
+	<h1> NTNU study programme </h1>
 	<p> <b> Study Programme: </b> [uni.programmes.name/]</p>
 	<p> Specializations: </p>
 	<select onchange="selectSpecialization(event)">
