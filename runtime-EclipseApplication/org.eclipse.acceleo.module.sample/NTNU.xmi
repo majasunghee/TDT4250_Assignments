@@ -10,9 +10,9 @@
       <semesters
           year="1">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.22 //@courses.1"/>
         <groupedCourses
-            courses="//@courses.4 //@courses.3 //@courses.2"
+            courses="//@courses.2 //@courses.6 //@courses.3"
             type="Elective"/>
       </semesters>
       <semesters
@@ -36,10 +36,6 @@
           year="2">
         <groupedCourses
             courses="//@courses.3"/>
-      </semesters>
-      <semesters>
-        <groupedCourses
-            courses="//@courses.9"/>
       </semesters>
     </specializations>
     <specializations>
@@ -47,7 +43,7 @@
       <semesters
           year="1">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.1 //@courses.8"/>
         <groupedCourses
             courses="//@courses.4 //@courses.3 //@courses.2"
             type="Elective"/>
@@ -56,15 +52,15 @@
           year="1"
           season="Vår">
         <groupedCourses
-            courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+            courses="//@courses.23"/>
         <groupedCourses
-            courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
+            courses="//@courses.8 //@courses.24 //@courses.25"
             type="Elective"/>
       </semesters>
       <semesters
           year="2">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.19"/>
         <groupedCourses
             courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
             type="Elective"/>
@@ -73,10 +69,6 @@
           year="2">
         <groupedCourses
             courses="//@courses.3"/>
-      </semesters>
-      <semesters>
-        <groupedCourses
-            courses="//@courses.9"/>
       </semesters>
     </specializations>
     <specializations>
@@ -101,7 +93,7 @@
       <semesters
           year="2">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.19"/>
         <groupedCourses
             courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
             type="Elective"/>
@@ -111,17 +103,13 @@
         <groupedCourses
             courses="//@courses.3"/>
       </semesters>
-      <semesters>
-        <groupedCourses
-            courses="//@courses.9"/>
-      </semesters>
     </specializations>
     <specializations>
       <name>AI</name>
       <semesters
           year="1">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.1 //@courses.27 //@courses.6"/>
         <groupedCourses
             courses="//@courses.4 //@courses.3 //@courses.2"
             type="Elective"/>
@@ -130,7 +118,7 @@
           year="1"
           season="Vår">
         <groupedCourses
-            courses="//@courses.18 //@courses.17 //@courses.16 //@courses.15"/>
+            courses="//@courses.28 //@courses.29 //@courses.26"/>
         <groupedCourses
             courses="//@courses.12 //@courses.11 //@courses.10 //@courses.9"
             type="Elective"/>
@@ -138,7 +126,7 @@
       <semesters
           year="2">
         <groupedCourses
-            courses="//@courses.0 //@courses.1 //@courses.2 //@courses.3"/>
+            courses="//@courses.19"/>
         <groupedCourses
             courses="//@courses.4 //@courses.3 //@courses.2 //@courses.1"
             type="Elective"/>
@@ -147,10 +135,6 @@
           year="2">
         <groupedCourses
             courses="//@courses.3"/>
-      </semesters>
-      <semesters>
-        <groupedCourses
-            courses="//@courses.9"/>
       </semesters>
     </specializations>
   </programmes>
@@ -250,5 +234,45 @@ Recommender Systems</name>
       credits="30.0"
       examType="Project">
     <name>Master Thesis for MSIT</name>
+  </courses>
+  <courses code="IT3402"
+      credits="7.5"
+      examType="Project">
+    <name>User Interface Design</name>
+  </courses>
+  <courses code="IT3010"
+      credits="7.5"
+      examType="Project">
+    <name>Empirical research methodologies in IT and digitalization</name>
+  </courses>
+  <courses code="IT3022"
+      credits="7.5"
+      examType="Project">
+    <name>Participatory design</name>
+  </courses>
+  <courses code="IT3024"
+      credits="7.5"
+      examType="Project">
+    <name>Research Methods in Human-Computer Interaction</name>
+  </courses>
+  <courses code="TDT4171"
+      credits="7.5"
+      examType="Project">
+    <name>Artificial Intelligence Methods</name>
+  </courses>
+  <courses code="TDT4173"
+      credits="7.5"
+      examType="Project">
+    <name>Machine Learning</name>
+  </courses>
+  <courses code="IT3105"
+      credits="7.5"
+      examType="Project">
+    <name>Artificial Intelligence Programming</name>
+  </courses>
+  <courses code="IT3708"
+      credits="7.5"
+      examType="Project">
+    <name>Bio-Inspired Artificial Intelligence</name>
   </courses>
 </study_programme:University>
