@@ -61,7 +61,7 @@ public class Transformation {
       resource1.save(null);
       final Resource resource2 = rs.createResource(URI.createFileURI((dstFolder + "NTNU-change-course.xmi")));
       EList<EObject> _contents_1 = resource2.getContents();
-      Course _changeExamtypeInCourse = Transformation.changeExamtypeInCourse(uniNTNU, "TDT4250", ExamType.PROJECT);
+      Course _changeExamtypeInCourse = Transformation.changeExamtypeInCourse(uniNTNU, "TDT4250", ExamType.ORAL);
       _contents_1.add(_changeExamtypeInCourse);
       resource2.save(null);
       final Resource resource3 = rs.createResource(URI.createFileURI((dstFolder + "NTNU-show-select-group-course.xmi")));

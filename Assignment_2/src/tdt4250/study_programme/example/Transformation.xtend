@@ -47,7 +47,7 @@ class Transformation {
 		
 		//Transformation 2
 		val resource2 = rs.createResource(URI.createFileURI(dstFolder + "NTNU-change-course.xmi"))
-		resource2.contents += uniNTNU.changeExamtypeInCourse("TDT4250", ExamType.PROJECT)
+		resource2.contents += uniNTNU.changeExamtypeInCourse("TDT4250", ExamType.ORAL)
 		resource2.save(null)
 		
 		//Transformation 3
